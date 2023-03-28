@@ -1,0 +1,23 @@
+$btn-radius: 10px;
+
+.card{
+    border-radius: 20px;
+    background-color: #FFE248;
+}
+
+.btn{
+    border-radius: $btn-radius;
+}
+
+#add-new{
+    border-radius: $btn-radius;
+    width: 200px;
+}
+
+#add-new:hover{
+    transform: scale(1.1);
+}
+
+#btn-prim-log-card:hover{
+    transform: scale(1.1);
+}

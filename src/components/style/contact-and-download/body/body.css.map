@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,sBAAsB,CAAA;EAClB,gBAAgB,ECHJ,OAAO;CDItB;;AAED,AAAA,aAAa,CAAC;EACV,gBAAgB,EAAE,OAAO;CAC5B",
+    "sources": [
+        "body.scss",
+        "../../mixins-and-variables/mixins-and-variables.scss"
+    ],
+    "names": [],
+    "file": "body.css"
+}

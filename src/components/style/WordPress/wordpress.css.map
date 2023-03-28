@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,QAAQ,CAAA;EACJ,gBAAgB,ECHJ,OAAO;EDInB,OAAO,EAAE,EAAE;CACd;;AAED,AAAA,SAAS,CAAA;EACL,UAAU,EAAE,IAAI,CAAC,IAAI,CAAC,IAAI,CAAC,IAAI,CCPT,OAAO;CDQhC;;AAED,AAAA,SAAS,AAAA,MAAM,CAAA;EACX,UAAU,EAAE,aAAa;EACzB,SAAS,EAAE,WAAW;CACzB;;AAED,AAAA,MAAM,CAAA;EACF,WAAW,EAAE,IAAI;CACpB",
+    "sources": [
+        "wordpress.scss",
+        "../mixins-and-variables/mixins-and-variables.scss"
+    ],
+    "names": [],
+    "file": "wordpress.css"
+}

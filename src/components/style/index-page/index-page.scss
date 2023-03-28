@@ -1,0 +1,84 @@
+@import '../mixins-and-variables/mixins-and-variables.scss';
+@import url('https://fonts.cdnfonts.com/css/miama');
+
+.index-body{
+    background-color: $body-bckg-col;
+}
+
+#index-profile-img{
+    border-radius: 50%;
+}
+
+#hello{
+    padding-top: 2%;
+}
+
+#welcome{
+    font-family: "Brush Script MT", cursive;
+    font-size: 500%;
+}
+
+.index-elements{
+    animation: fadeIn 1.5s;
+}
+
+.index-elements ,h1, h3{
+    text-align: center;
+}
+
+.index-page-text{
+    padding: 2%;
+}
+
+.describe-about-div{
+    border: 2px solid $header-and-footer-color;
+    border-radius: 15px 15px 15px 15px;
+    line-height: 150%;
+}
+
+#describe-main{
+    @include describeMixin;
+    text-align: center;
+}
+
+#describe-bottom-about{
+    @include describeMixin;
+    text-align: center;
+    padding-top: 2%;
+}
+
+#describe-about{
+    @include describeMixin;    
+    text-align: center;
+}
+
+#describe{
+    @include describeMixin;
+    text-align: justify;
+}
+
+#describe-bottom{
+    @include describeMixin;
+    text-align: justify;
+}
+
+#link{
+    text-decoration: none;
+}
+
+
+#link:hover{
+    font-size: 1.15em;
+}  
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

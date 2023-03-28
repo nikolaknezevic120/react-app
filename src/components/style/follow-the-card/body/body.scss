@@ -1,0 +1,14 @@
+@import '../../mixins-and-variables/mixins-and-variables.scss';
+
+.body{
+    background-color: $body-bckg-col;
+    padding: 5%;
+}
+
+#detail-label {
+    @include input-mixin;
+}
+
+#detail-fix-label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

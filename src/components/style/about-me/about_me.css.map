@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,gBAAgB,CAAA;EACZ,gBAAgB,ECHJ,OAAO;EDInB,OAAO,EAAE,EAAE;CACd;;AAED,AAAA,gBAAgB,EAAE,CAAC,CAAA;EACf,UAAU,EAAE,OAAO;CACtB;;AAED,AAAA,OAAO,EAAE,EAAE,CAAA;EACP,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,eAAe;CAC/B;;AAED,AAAA,QAAQ,CAAA;EACJ,gBAAgB,EAAE,WAAW;EAC7B,YAAY,EAAE,WAAW;EACzB,UAAU,EAAE,aAAa;CAC5B;;AAED,AAAA,QAAQ,AAAA,MAAM,CAAA;EACV,SAAS,EAAE,UAAU;EACrB,kBAAkB,EAAE,MAAM;CAC7B",
+    "sources": [
+        "about_me.scss",
+        "../mixins-and-variables/mixins-and-variables.scss"
+    ],
+    "names": [],
+    "file": "about_me.css"
+}

@@ -1,0 +1,19 @@
+$body-bckg-col: #FFE99D;
+$header-and-footer-color: #FFE248;
+
+.modal-body{
+    background-color: $body-bckg-col;
+}
+
+.modal-header{
+    background-image: linear-gradient($header-and-footer-color, $body-bckg-col);
+}
+
+.modal-footer{
+    background-image: linear-gradient($body-bckg-col, $header-and-footer-color);
+}
+
+.btn-primary:hover{
+    transform: scale(1.1);
+}
+

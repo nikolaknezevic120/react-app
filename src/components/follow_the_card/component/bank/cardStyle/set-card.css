@@ -1,0 +1,19 @@
+.modal-body {
+  background-color: #FFE99D;
+}
+
+.modal-header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFE248), to(#FFE99D));
+  background-image: linear-gradient(#FFE248, #FFE99D);
+}
+
+.modal-footer {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFE99D), to(#FFE248));
+  background-image: linear-gradient(#FFE99D, #FFE248);
+}
+
+.btn-primary:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+/*# sourceMappingURL=set-card.css.map */

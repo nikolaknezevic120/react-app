@@ -1,0 +1,46 @@
+@import '../mixins-and-variables/mixins-and-variables.scss';
+
+#header {
+    background-image: linear-gradient($header-and-footer-color, $body-bckg-col);
+    border-radius: 0px 0px 15px 15px;
+}
+
+#navBar-profile-image img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu{
+    background-color: $body-bckg-col;
+    border-radius: 15%;
+    animation: fadeIn 1s;
+    overflow: hidden;
+}
+
+#translateBtn{
+    background-color: transparent;
+    border: none;
+    transform: none;
+    margin: 0%;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+#translateImage{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 2%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

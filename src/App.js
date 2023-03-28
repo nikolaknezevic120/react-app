@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import about_me from "./components/about-me";
+import follow_the_card from "./components/follow_the_card/follow_the_card";
+import LogIn from "./components/follow_the_card/component/LogIn";
+import indexPage from "./components/indexPage";
+import infinite_slider from "./components/infinite_slider/infinite_slider";
+import WordPress_Page from "./components/WordPress/WordPress_Page";
+import ContactPage from "./components/download/ContactPage";
+import Memory from "./components/memory/Memory";
+
+import {Navigate, Route, Routes} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Navigate to="/index" replace />} />
+      <Route path="/index" element={indexPage()} /> 
+      <Route path="/about" element={about_me()} />
+      <Route path="/followTheCard" element={follow_the_card()} /> 
+      <Route path="/login" element={LogIn()} />
+      <Route path="/infinite_slider" element={infinite_slider()} /> 
+      <Route path="/word-press" element={WordPress_Page()} />
+      <Route path="/download-and-contact" element={ContactPage()} />
+      <Route path="/memory" element={Memory()}/>
+    </Routes>
   );
 }
 

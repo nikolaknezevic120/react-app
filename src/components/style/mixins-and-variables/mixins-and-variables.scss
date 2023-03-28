@@ -1,0 +1,30 @@
+$body-bckg-col: #FFE99D;
+$header-and-footer-color: #FFE248;
+
+@mixin input-mixin {
+    text-align: center;
+    border-radius: 15px; 
+    border: 3px solid $header-and-footer-color;
+}
+
+@mixin describeMixin {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+//INFINITE SLIDER//
+
+$gap: 10px;
+
+@mixin displayFlexRow {
+    display: inline-flex;
+    flex-direction: row;
+    column-gap: $gap;
+    overflow: hidden;
+}
+
+@mixin imageSettings {
+    width: auto;
+    height: 200px;
+    border-radius: 20px;
+}

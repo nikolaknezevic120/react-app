@@ -1,0 +1,372 @@
+.mainTitle {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.playingField {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 2.5%;
+}
+
+.resultArea {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  padding: 5%;
+  border: 0.25rem solid;
+  border-radius: 20%;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, white, #FFE248);
+}
+
+.results {
+  margin-top: 5%;
+}
+
+.animate {
+  -webkit-transform-style: flat;
+          transform-style: flat;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+.imageDivClsDisabled {
+  pointer-events: none;
+  -webkit-transform-style: flat;
+          transform-style: flat;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+.image-row-clicked {
+  pointer-events: none;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.image-row-clicked img {
+  width: 9vw;
+  height: 9vw;
+  margin: 5px;
+  border-radius: 20px;
+}
+
+.image-row-clicked img.animate {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform: translate3d();
+          transform: translate3d();
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+}
+
+.image-row {
+  pointer-events: all;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.image-row img {
+  width: 9vw;
+  height: 9vw;
+  margin: 5px;
+  border-radius: 20px;
+}
+
+.image-row img.animate {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform: translate3d();
+          transform: translate3d();
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+}
+
+.title, .results {
+  width: 100%;
+}
+
+.title h3 {
+  font-size: 44px;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.hiddenDisplayAnimation {
+  display: none;
+}
+
+.displayAnimation {
+  margin-top: 10%;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFE248), to(#FFE99D));
+  background-image: linear-gradient(#FFE248, #FFE99D);
+}
+
+.animation {
+  height: 85px;
+  overflow: hidden;
+  margin-left: 1rem;
+  padding: 10px;
+  text-align: center;
+}
+
+.animation > div > div {
+  height: 100px;
+  display: inline-block;
+}
+
+.animation div:first-child {
+  -webkit-animation: text-animation 8s infinite;
+          animation: text-animation 8s infinite;
+}
+
+.first div {
+  font-size: 45px;
+}
+
+.second div {
+  font-size: 45px;
+}
+
+.third div {
+  font-size: 45px;
+}
+
+.ngbtn {
+  margin-top: 5%;
+}
+
+.hiddenngbtn {
+  margin-top: 5%;
+  display: none;
+}
+
+@-webkit-keyframes text-animation {
+  0% {
+    margin-top: 0;
+  }
+  10% {
+    margin-top: 0;
+  }
+  20% {
+    margin-top: -43px;
+  }
+  30% {
+    margin-top: -43px;
+  }
+  40% {
+    margin-top: -106px;
+  }
+  60% {
+    margin-top: -106px;
+  }
+  70% {
+    margin-top: -43px;
+  }
+  80% {
+    margin-top: -43px;
+  }
+  90% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes text-animation {
+  0% {
+    margin-top: 0;
+  }
+  10% {
+    margin-top: 0;
+  }
+  20% {
+    margin-top: -43px;
+  }
+  30% {
+    margin-top: -43px;
+  }
+  40% {
+    margin-top: -106px;
+  }
+  60% {
+    margin-top: -106px;
+  }
+  70% {
+    margin-top: -43px;
+  }
+  80% {
+    margin-top: -43px;
+  }
+  90% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-row-clicked img {
+    width: 19vw;
+    height: 19vw;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .image-row img {
+    width: 19vw;
+    height: 19vw;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .animation {
+    width: 100%;
+  }
+  .first div {
+    font-size: 25px;
+  }
+  .second div {
+    font-size: 25px;
+  }
+  .third div {
+    font-size: 25px;
+  }
+  @-webkit-keyframes text-animation {
+    0% {
+      margin-top: 0;
+    }
+    10% {
+      margin-top: 0;
+    }
+    20% {
+      margin-top: -66px;
+    }
+    30% {
+      margin-top: -66px;
+    }
+    40% {
+      margin-top: -135px;
+    }
+    60% {
+      margin-top: -135px;
+    }
+    70% {
+      margin-top: -66px;
+    }
+    80% {
+      margin-top: -66px;
+    }
+    90% {
+      margin-top: 0;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+  @keyframes text-animation {
+    0% {
+      margin-top: 0;
+    }
+    10% {
+      margin-top: 0;
+    }
+    20% {
+      margin-top: -66px;
+    }
+    30% {
+      margin-top: -66px;
+    }
+    40% {
+      margin-top: -135px;
+    }
+    60% {
+      margin-top: -135px;
+    }
+    70% {
+      margin-top: -66px;
+    }
+    80% {
+      margin-top: -66px;
+    }
+    90% {
+      margin-top: 0;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+  .resultArea {
+    margin-bottom: 5%;
+  }
+  .ngbtn {
+    margin-bottom: 5%;
+  }
+  .hiddenngbtn {
+    margin-bottom: 5%;
+    display: none;
+  }
+}
+/*# sourceMappingURL=memoryPage.css.map */

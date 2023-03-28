@@ -1,0 +1,62 @@
+#header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFE248), to(#FFE99D));
+  background-image: linear-gradient(#FFE248, #FFE99D);
+  border-radius: 0px 0px 15px 15px;
+}
+
+#navBar-profile-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  background-color: #FFE99D;
+  border-radius: 15%;
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+  overflow: hidden;
+}
+
+#translateBtn {
+  background-color: transparent;
+  border: none;
+  -webkit-transform: none;
+          transform: none;
+  margin: 0%;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+#translateImage {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  padding: 2%;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,102 @@
+@import url("https://fonts.cdnfonts.com/css/miama");
+.index-body {
+  background-color: #FFE99D;
+}
+
+#index-profile-img {
+  border-radius: 50%;
+}
+
+#hello {
+  padding-top: 2%;
+}
+
+#welcome {
+  font-family: "Brush Script MT", cursive;
+  font-size: 500%;
+}
+
+.index-elements {
+  -webkit-animation: fadeIn 1.5s;
+          animation: fadeIn 1.5s;
+}
+
+.index-elements, h1, h3 {
+  text-align: center;
+}
+
+.index-page-text {
+  padding: 2%;
+}
+
+.describe-about-div {
+  border: 2px solid #FFE248;
+  border-radius: 15px 15px 15px 15px;
+  line-height: 150%;
+}
+
+#describe-main {
+  padding-left: 2%;
+  padding-right: 2%;
+  text-align: center;
+}
+
+#describe-bottom-about {
+  padding-left: 2%;
+  padding-right: 2%;
+  text-align: center;
+  padding-top: 2%;
+}
+
+#describe-about {
+  padding-left: 2%;
+  padding-right: 2%;
+  text-align: center;
+}
+
+#describe {
+  padding-left: 2%;
+  padding-right: 2%;
+  text-align: justify;
+}
+
+#describe-bottom {
+  padding-left: 2%;
+  padding-right: 2%;
+  text-align: justify;
+}
+
+#link {
+  text-decoration: none;
+}
+
+#link:hover {
+  font-size: 1.15em;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+/*# sourceMappingURL=index-page.css.map */

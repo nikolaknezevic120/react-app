@@ -1,0 +1,19 @@
+@import '../mixins-and-variables/mixins-and-variables.scss';
+
+.wp-body{
+    background-color: $body-bckg-col;
+    padding: 3%;
+}
+
+#wp-image{
+    box-shadow: 10px 10px 10px 10px $header-and-footer-color;
+}
+
+#wp-image:hover{
+    transition: transform .5s;
+    transform: scale(1.04);
+}
+
+#h3-wp{
+    padding-top: 20px;
+}

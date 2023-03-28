@@ -1,0 +1,26 @@
+@import '../mixins-and-variables/mixins-and-variables.scss';
+
+#first-page-body{
+    background-color: $body-bckg-col;
+    padding: 2%;
+}
+
+#first-page-body ,p{
+    text-align: justify;
+}
+
+#wlcome ,h2{
+    text-align: center;
+    text-shadow: 2px 2px #FF0000;
+}
+
+#openBtn{
+    background-color: transparent;
+    border-color: transparent;
+    transition: transform .2s;
+}
+
+#openBtn:hover{
+    transform: scale(1.2);
+    animation-duration: 1.2sec;
+}

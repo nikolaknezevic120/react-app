@@ -1,0 +1,30 @@
+#first-page-body {
+  background-color: #FFE99D;
+  padding: 2%;
+}
+
+#first-page-body, p {
+  text-align: justify;
+}
+
+#wlcome, h2 {
+  text-align: center;
+  text-shadow: 2px 2px #FF0000;
+}
+
+#openBtn {
+  background-color: transparent;
+  border-color: transparent;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+#openBtn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-animation-duration: 1.2sec;
+          animation-duration: 1.2sec;
+}
+/*# sourceMappingURL=about_me.css.map */

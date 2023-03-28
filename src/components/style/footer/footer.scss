@@ -1,0 +1,31 @@
+@import '../mixins-and-variables/mixins-and-variables.scss';
+
+.footer-div {
+    background-image: linear-gradient($body-bckg-col, $header-and-footer-color);
+    border-radius: 15px 15px 0px 0px;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.footer-bottom h6{
+    text-align: center;
+    padding: 2%;
+}
+
+#h5-foot{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+#links:hover{
+    font-size: 1.2em;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+}
