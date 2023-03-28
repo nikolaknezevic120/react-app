@@ -46,17 +46,17 @@ export default function footer() {
                   <Col>
                   <h5 id="h5-foot">Podijeli</h5>
                   <p className='icons'>
-                    <FacebookShareButton url={'https://www.example.com'} quote={'Dummy text!'}hashtag="#muo">
+                    <FacebookShareButton url={'http://46.101.104.236:3000'} quote={'Dummy text!'}hashtag="#muo">
                       <FacebookIcon size={32} round />
                     </FacebookShareButton> 
                   </p>
                   <p className='icons'>
-                    <WhatsappShareButton url={'https://www.example.com'}>
+                    <WhatsappShareButton url={'http://46.101.104.236:3000'}>
                       <WhatsappIcon size={32} round />
                     </WhatsappShareButton>
                   </p>
                   <p className='icons'>
-                    <EmailShareButton url={'https://www.example.com'}>
+                    <EmailShareButton url={'http://46.101.104.236:3000'}>
                       <EmailIcon size={32} round />
                     </EmailShareButton>
                   </p>
@@ -98,15 +98,15 @@ export default function footer() {
                         <h5 id="h5-foot">Linkovi</h5>
                           <Col>
                             <h6>Main links</h6>
-                            <h6> <a href="https://nikolaknezevic120.github.io/nikola-react-app/#/index" id='links'><MdOutlinePageview /> Home page</a></h6>
-                            <h6> <a href="https://nikolaknezevic120.github.io/nikola-react-app/#/about" id='links'><MdOutlinePageview /> About me</a></h6>
+                            <h6> <a href="#/index" id='links'><MdOutlinePageview /> Home page</a></h6>
+                            <h6> <a href="#/about" id='links'><MdOutlinePageview /> About me</a></h6>
                           </Col>
                           <Col>
                             <h6>Links on projects</h6>
-                            <h6> <a href="https://nikolaknezevic120.github.io/nikola-react-app/#/login" id='links'><FaReact /> 
+                            <h6> <a href="#/login" id='links'><FaReact /> 
                               Follow the card</a>
                             </h6>
-                            <h6> <a href="https://nikolaknezevic120.github.io/nikola-react-app/#/infinite_slider" id='links'><TbBrandJavascript />
+                            <h6> <a href="#/infinite_slider" id='links'><TbBrandJavascript />
                               Infinite slider</a>
                             </h6>
                             <h6> <a href="#/memory" id='links'><FaReact /> 
@@ -118,17 +118,17 @@ export default function footer() {
                     <Col>
                   <h5 id="h5-foot">Share</h5>
                   <p className='icons'>
-                    <FacebookShareButton url={'https://www.example.com'} quote={'Dummy text!'}hashtag="#muo">
+                    <FacebookShareButton url={'http://46.101.104.236:3000'} quote={'Dummy text!'}hashtag="#muo">
                       <FacebookIcon size={32} round />
                     </FacebookShareButton> 
                   </p>
                   <p className='icons'>
-                    <WhatsappShareButton url={'https://www.example.com'}>
+                    <WhatsappShareButton url={'http://46.101.104.236:3000'}>
                       <WhatsappIcon size={32} round />
                     </WhatsappShareButton>
                   </p>
                   <p className='icons'>
-                    <EmailShareButton url={'https://www.example.com'}>
+                    <EmailShareButton url={'http://46.101.104.236:3000'}>
                       <EmailIcon size={32} round />
                     </EmailShareButton>
                   </p>
@@ -141,7 +141,7 @@ export default function footer() {
   
                     <Col>
                       <h5 id="h5-foot">Contact</h5>
-                        <p><BsFillChatSquareTextFill /><a href='https://nikolaknezevic120.github.io/nikola-react-app/#/download-and-contact'> Send me mail.</a></p>
+                        <p><BsFillChatSquareTextFill /><a href='#/download-and-contact'> Send me mail.</a></p>
                         <p><BsFillTelephoneOutboundFill /> Mob: <a href="tel:+385958409108"> 095 840 91 08 </a></p>
                         <p><BsEnvelopeOpenFill /> Mail: <a href="mailto:nikola120k@gmail.com"> nikola120k@gmail.com </a></p>
                     </Col>
