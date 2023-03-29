@@ -95,7 +95,7 @@ export default function footer() {
                   <Row>
                     <Col>
                       <Row>
-                        <h5 id="h5-foot">Linkovi</h5>
+                        <h5 id="h5-foot">Links</h5>
                           <Col>
                             <h6>Main links</h6>
                             <h6> <a href="#/index" id='links'><MdOutlinePageview /> Home page</a></h6>
