@@ -283,80 +283,10 @@
     border-radius: 5px;
   }
   .animation {
-    width: 100%;
+    display: none;
   }
-  .first div {
-    font-size: 25px;
-  }
-  .second div {
-    font-size: 25px;
-  }
-  .third div {
-    font-size: 25px;
-  }
-  @-webkit-keyframes text-animation {
-    0% {
-      margin-top: 0;
-    }
-    10% {
-      margin-top: 0;
-    }
-    20% {
-      margin-top: -66px;
-    }
-    30% {
-      margin-top: -66px;
-    }
-    40% {
-      margin-top: -135px;
-    }
-    60% {
-      margin-top: -135px;
-    }
-    70% {
-      margin-top: -66px;
-    }
-    80% {
-      margin-top: -66px;
-    }
-    90% {
-      margin-top: 0;
-    }
-    100% {
-      margin-top: 0;
-    }
-  }
-  @keyframes text-animation {
-    0% {
-      margin-top: 0;
-    }
-    10% {
-      margin-top: 0;
-    }
-    20% {
-      margin-top: -66px;
-    }
-    30% {
-      margin-top: -66px;
-    }
-    40% {
-      margin-top: -135px;
-    }
-    60% {
-      margin-top: -135px;
-    }
-    70% {
-      margin-top: -66px;
-    }
-    80% {
-      margin-top: -66px;
-    }
-    90% {
-      margin-top: 0;
-    }
-    100% {
-      margin-top: 0;
-    }
+  .displayAnimation {
+    display: none;
   }
   .resultArea {
     margin-bottom: 5%;
