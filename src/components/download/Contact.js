@@ -15,7 +15,7 @@ export default function Contact() {
           <SocialIcon url="https://www.facebook.com/knezeic.nikola/" />
           <SocialIcon url="https://www.youtube.com/channel/UCwNLB4k6TXGGxpozjQTR9Vg" />
           <h3>Whatsapp</h3>     
-          <SocialIcon url="https://api.whatsapp.com/send/?phone=385913221421&text&type=phone_number&app_absent=0" />
+          <SocialIcon url="https://api.whatsapp.com/send/?phone=385958409108&text&type=phone_number&app_absent=0" />
           
         </div>
       );
@@ -27,7 +27,7 @@ export default function Contact() {
           <SocialIcon url="https://www.facebook.com/knezeic.nikola/" />
           <SocialIcon url="https://www.youtube.com/channel/UCwNLB4k6TXGGxpozjQTR9Vg" />
           <h3>Whatsapp</h3>     
-          <SocialIcon url="https://api.whatsapp.com/send/?phone=385913221421&text&type=phone_number&app_absent=0" />
+          <SocialIcon url="https://api.whatsapp.com/send/?phone=385958409108&text&type=phone_number&app_absent=0" />
           
         </div>
       );

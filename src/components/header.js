@@ -4,7 +4,7 @@ import cro from '../components/images/images/cro.jpg';
 import eng from '../components/images/images/eng.jpg'
 
 import { Navbar, Container, Nav, NavDropdown, Button } from 'react-bootstrap';
-import profileImage from './images/profile-image/profile-image.jpg';
+import profileImage from './images/profile-image/profile-image.png';
 import './style/header/header.css';
 
 function change(option){

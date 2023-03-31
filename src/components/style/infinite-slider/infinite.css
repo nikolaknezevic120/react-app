@@ -93,8 +93,7 @@
   position: absolute;
   width: 8%;
   height: 200px;
-  margin-right: -8%;
-  background-color: white;
+  background-color: #1d1d20;
   z-index: 1;
 }
 
@@ -107,7 +106,7 @@
 
 @media (min-width: 661px) {
   .buttons {
-    margin-right: -8%;
+    margin-lefy: -8%;
   }
 }
 

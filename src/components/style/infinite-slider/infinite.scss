@@ -48,15 +48,14 @@
     position: absolute;
     width: 8%;
     height: 200px;
-    margin-right: -8%;
-    background-color: white;
+    background-color: $header-and-footer-color;
     z-index: 1;
     @media (max-width: 660px){
         margin-right: -13%;
         width: 13%;
         }
     @media (min-width: 661px) {
-        margin-right: -8%;
+        margin-lefy: -8%;
     }
 }
 

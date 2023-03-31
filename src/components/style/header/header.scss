@@ -3,6 +3,44 @@
 #header {
     background-image: linear-gradient($header-and-footer-color, $body-bckg-col);
     border-radius: 0px 0px 15px 15px;
+    max-width: 100%;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar-brand:hover{
+    color:white;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:focus{
+    color: white;
+}
+
+.nav-link:hover{
+    color: gold;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
+    color: white;
+    text-decoration: underline;
+    }
+
+.navbar-nav .show > .nav-link{
+    color: $body-bckg-col;
+    background-image: linear-gradient($body-bckg-col, white);
+    border-top-right-radius: 15%;
+    border-top-left-radius: 15%;
+}
+
+.dropdown-item:hover{
+    color: white;
+    background-color: $body-bckg-col;
 }
 
 #navBar-profile-image img{
@@ -11,11 +49,18 @@
     border-radius: 50%;
 }
 
+.container{
+    max-width: 100%;
+}
+
 .navbar-expand-lg .navbar-nav .dropdown-menu{
-    background-color: $body-bckg-col;
-    border-radius: 15%;
+    background-color: white;
     animation: fadeIn 1s;
     overflow: hidden;
+
+    margin: 0px;
+    border: 1px solid white;
+    border-top-left-radius: 0px;
 }
 
 #translateBtn{
@@ -23,7 +68,7 @@
     border: none;
     transform: none;
     margin: 0%;
-    color: rgba(0, 0, 0, 0.55);
+    color: white;
 }
 
 #translateImage{

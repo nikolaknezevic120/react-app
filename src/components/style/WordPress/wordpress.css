@@ -1,11 +1,11 @@
 .wp-body {
-  background-color: #FFE99D;
+  background-color: #1d1d20;
   padding: 3%;
 }
 
 #wp-image {
-  -webkit-box-shadow: 10px 10px 10px 10px #FFE248;
-          box-shadow: 10px 10px 10px 10px #FFE248;
+  -webkit-box-shadow: 10px 10px 10px 10px #1d1d20;
+          box-shadow: 10px 10px 10px 10px #1d1d20;
 }
 
 #wp-image:hover {

@@ -5,17 +5,80 @@
     background-color: $body-bckg-col;
 }
 
+#root{
+    background-color: $body-bckg-col;
+}
+
+.describe-about{
+    color: white;
+}
+
+.describe-about h3{
+    font-size: 40px;
+    padding: 2%;
+}
+.aboutTasks{
+    color: white;
+    text-align: justify;
+}
+
+#openBtn{
+    cursor: none;
+}
+
+.aboutTasksRow{
+
+    border-bottom: 0.35rem solid white;
+
+    margin-left: 10%;
+    margin-right: 7.5%;
+    padding-bottom: 2.5%;
+
+    border-image-slice: 1;
+  
+    border-image-source: linear-gradient(to left, white, $header-and-footer-color);
+}
+
 #index-profile-img{
     border-radius: 50%;
+    width: 20vw;
+    margin-top: 10%;
+
+    padding-top: 5%;
+    padding-right: 5%;
+
+    border-top: 0.25rem solid;
+    border-right: 0.25rem solid;
+    border-radius: 20%;
+    border-image-slice: 1;
+  
+    border-image-source: linear-gradient(to left, white, $header-and-footer-color);
+
 }
 
 #hello{
-    padding-top: 2%;
+    margin-top: 5%;
+    margin-left: 10%;
+
+    padding-top: 5%;
+    padding-left: 5%;
+
+    font-family: "Segoe UI", sans-serif;
+    color: white;
+    text-align: left;
+    line-height: 200%;
+
+    border-top: 0.25rem solid;
+    border-left: 0.25rem solid;
+    border-radius: 20%;
+    border-image-slice: 1;
+  
+    border-image-source: linear-gradient(to right, white, $header-and-footer-color);
 }
 
 #welcome{
-    font-family: "Brush Script MT", cursive;
-    font-size: 500%;
+    -webkit-text-stroke: 2px black;
+    -webkit-text-fill-color: rgb(204, 204, 204);;    
 }
 
 .index-elements{
@@ -26,50 +89,53 @@
     text-align: center;
 }
 
-.index-page-text{
-    padding: 2%;
-}
-
-.describe-about-div{
-    border: 2px solid $header-and-footer-color;
-    border-radius: 15px 15px 15px 15px;
-    line-height: 150%;
-}
-
 #describe-main{
-    @include describeMixin;
-    text-align: center;
+    text-align: left;
+    margin-left: 10%;
+    padding-left: 5%;
+    font-family: "Segoe UI", sans-serif;
+    color: #d4922f;
+    white-space: nowrap;
+
+    overflow: hidden; 
+    animation: typing 3.5s steps(30, end);
+}
+
+#describe-main-mob{
+    display: none;
+}
+
+#describe-bottom-about-mob{
+    display: none;
 }
 
 #describe-bottom-about{
-    @include describeMixin;
-    text-align: center;
-    padding-top: 2%;
+    text-align: left;
+    margin-left: 10%;
+    font-family: "Segoe UI", sans-serif;
+    color: #d4922f;
+    white-space: nowrap;
+
+    overflow: hidden; 
+    animation: typing 3.5s steps(100, end);
 }
 
 #describe-about{
-    @include describeMixin;    
     text-align: center;
 }
 
+
 #describe{
-    @include describeMixin;
     text-align: justify;
 }
 
 #describe-bottom{
-    @include describeMixin;
     text-align: justify;
 }
 
 #link{
     text-decoration: none;
 }
-
-
-#link:hover{
-    font-size: 1.15em;
-}  
 
 @keyframes fadeIn {
     from {
@@ -80,5 +146,54 @@
     to {
         opacity: 1;
         transform: translateY(0px);
+    }
+}
+
+@keyframes typing {
+    from { width: 0% }
+    to { width: 100% }
+  }
+
+@media (max-width: 768px){
+    #index-profile-img{
+        border: none;
+        border-radius: 50%;
+        width: 50vw;
+    }
+
+    #describe-main{
+        display: none;
+    }
+
+    #describe-bottom-about{
+        display: none;
+    }
+
+    #describe-bottom-about-mob{
+        display: block;        
+        text-align: left;
+        margin-left: 10%;
+        font-family: "Segoe UI", sans-serif;
+        color: #d4922f;
+    }
+
+    #describe-main-mob{
+        display: flex;
+        text-align: left;
+        padding-left: 15%;
+        padding-top: 5%;
+        font-family: "Segoe UI", sans-serif;
+        color: #d4922f;
+    }
+
+    #hello{
+        border-right: 0.25rem solid;
+        border-image-source: linear-gradient(to bottom, white, $header-and-footer-color);
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #index-profile-img{
+        display: none;
     }
 }

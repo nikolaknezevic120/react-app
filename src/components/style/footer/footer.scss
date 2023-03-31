@@ -3,9 +3,16 @@
 .footer-div {
     background-image: linear-gradient($body-bckg-col, $header-and-footer-color);
     border-radius: 15px 15px 0px 0px;
-    padding-top: 2%;
+    margin-top: 2.5%;
+    margin-left: 5%;
+    margin-right: 5%;
     padding-left: 5%;
-    padding-right: 5%;
+
+    border-image-slice: 1;
+    border-right: 0.25rem solid;
+    border-left: 0.25rem solid;
+    border-bottom: 0.25rem solid;
+    border-image-source: linear-gradient(to top, white, $header-and-footer-color);
 }
 
 .footer-bottom h6{
@@ -15,14 +22,23 @@
 
 #h5-foot{
     text-align: center;
+    color: white;
+}
+
+h6, p{
+    color: #d4922f;
 }
 
 a{
     text-decoration: none;
 }
 
+#links{
+    color: white;
+}
+
 #links:hover{
-    font-size: 1.2em;
+    color: #d4922f;
 }
 
 .icons{

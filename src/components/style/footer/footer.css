@@ -1,10 +1,16 @@
 .footer-div {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFE99D), to(#FFE248));
-  background-image: linear-gradient(#FFE99D, #FFE248);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1d1d20), to(#1d1d20));
+  background-image: linear-gradient(#1d1d20, #1d1d20);
   border-radius: 15px 15px 0px 0px;
-  padding-top: 2%;
+  margin-top: 2.5%;
+  margin-left: 5%;
+  margin-right: 5%;
   padding-left: 5%;
-  padding-right: 5%;
+  border-image-slice: 1;
+  border-right: 0.25rem solid;
+  border-left: 0.25rem solid;
+  border-bottom: 0.25rem solid;
+  border-image-source: linear-gradient(to top, white, #1d1d20);
 }
 
 .footer-bottom h6 {
@@ -14,14 +20,23 @@
 
 #h5-foot {
   text-align: center;
+  color: white;
+}
+
+h6, p {
+  color: #d4922f;
 }
 
 a {
   text-decoration: none;
 }
 
+#links {
+  color: white;
+}
+
 #links:hover {
-  font-size: 1.2em;
+  color: #d4922f;
 }
 
 .icons {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Container } from 'react-bootstrap';
-import profileImage from './images/profile-image/profile-image.jpg';
+import { Container, Row } from 'react-bootstrap';
+import Col from 'react-bootstrap/Col';
+import profileImage from './images/profile-image/profile-image.png';
 import './style/index-page/index-page.css';
 
 export default function IndexPage() {
@@ -15,25 +16,61 @@ export default function IndexPage() {
       <div className='index-body'>
         <div className='index-elements'>
           <h1 id='welcome'> Dobro došli </h1>
-          <img id='index-profile-img' src={profileImage} alt=""/>
+          <Row>
+          <Col lg={8} sm={12}>
           <h3 id='hello'>
             Ja sam Nikola, ovu aplikaciju sam napravio kako bih Vam prezentirao sebe i svoj rad.
           </h3>
-
-          <div className='index-page-text'>
-            <p id='describe-main'>
-              U ovoj aplikaciji se nalaze moje tri aplikacije koje sam izradio.
+          <p id='describe-main'>
+              // U ovoj aplikaciji se nalaze moje tri aplikacije koje sam izradio.
             </p>
+            
+            <p id='describe-main-mob'>
+              // U ovoj aplikaciji se nalaze moje tri aplikacije koje sam izradio.
+            </p>
+          </Col>
+          <Col lg={4} sm={12}>
+          <img id='index-profile-img' src={profileImage} alt=""/>
+          </Col>
+          </Row>            
 
-            <div className='describe-about-div'>
-              <p id='describe-about'>
-                <button id='openBtn' 
-                  onClick={() => setTextOpen(!textOpen)}>
+            <div className='describe-about' >
+
                   <h3>O zadatcima</h3>
-                </button>
-              </p>
 
-              {textOpen && <p id='describe'>
+
+              <div className='aboutTasksRow'>
+              <Row id='aboutTasksRow'>
+                <Col lg={4} sm={12}>
+                  <div className='aboutTasks'>
+                  <b>Follow the card</b> je zamišljena aplikacija u koju korisnik može unositi svoje bankovne kartice.<br />
+                    Budući da nisam radio backend, podatci o korisniku se spremaju u local storage, koji se klikom na button 
+                    odjavi se, čisti i tako se gube uneseni podatci kao i sve promjene izvršene u listi sa karticama.
+                    <a href='https://nikolaknezevic120.github.io/nikola-react-app/#/login' id='link'> Pogledajte aplikaciju.</a>
+                  </div>
+                </Col>
+
+                <Col lg={4} sm={12}>
+                  <div className='aboutTasks'>
+                  <b>Infinite slider</b> U ovom zadatku se nalaze dva reda fotografija različitih širina, te se klikom na strelicu 
+                oba dva reda pomiču lijevo ili desno za širinu posljednje slike u redu. 
+                <a href='https://nikolaknezevic120.github.io/nikola-react-app/#/infinite_slider' id='link'> Pogledajte aplikaciju.</a>
+                  </div>
+                </Col>
+
+                <Col lg={4} sm={12}>
+                <div className='aboutTasks'>
+
+                <b>Ostalo </b>Na mom github profilu se nalaze jos dva projekta koje sam radio na fakultetu za kolegije osnove objektnog 
+                programiranja i osnove web programiranja. <a href='https://github.com/nikolaknezevic120?tab=repositories' id='link' target="_blank" rel="noopener noreferrer">
+                  Pogledajte ih</a>.<br /> 
+                  </div>
+                </Col>
+              </Row>
+              </div>
+              
+              
+              {/* {textOpen && <p id='describe'>
                 <b>Follow the card</b> je zamišljena aplikacija u koju korisnik može unositi svoje bankovne kartice.<br />
                 Na log in stranici aplikacije korisnik se može ulogirati na već kreirani račun user name-om nikola65, a password 
                 je nebitan. Ako se korisnik odluči za kreiranje novog računa, mora ispuniti sva polja. Password i retype password 
@@ -58,19 +95,15 @@ export default function IndexPage() {
                 <b>Ostalo </b>Na mom github profilu se nalaze jos dva projekta koje sam radio na fakultetu za kolegije osnove objektnog 
                 programiranja i osnove web programiranja. <a href='https://github.com/nikolaknezevic120?tab=repositories' id='link' target="_blank" rel="noopener noreferrer">
                   Pogledajte ih</a>.<br />               
-              </p>}
+              </p>} */}
 
-              {textOpen && 
-                <button id='openBtn' 
-                  onClick={() => setTextOpen(!textOpen)}>
-                <h4>Zatvori</h4>
-              </button>              
-              }
             </div>
 
-            <p id='describe-bottom-about'>Ako želite saznati tko sam, čime se bavim, gdje i kako sam odrastao... kliknite 
-            <a href='https://nikolaknezevic120.github.io/nikola-react-app/#/about' id='link'> o meni</a>.</p>
-          </div>
+            <p id='describe-bottom-about'>// Ako želite saznati tko sam, čime se bavim, gdje i kako sam odrastao... kliknite 
+            <a href='#/about' id='link'> o meni</a>.</p>
+
+            <p id='describe-bottom-about-mob'>// Ako želite saznati tko sam, čime se bavim, gdje i kako sam odrastao... kliknite 
+            <a href='#/about' id='link'> o meni</a>.</p>
         </div>
       </div>
     </Container>
