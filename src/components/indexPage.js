@@ -29,7 +29,7 @@ export default function IndexPage() {
               // U ovoj aplikaciji se nalaze moje tri aplikacije koje sam izradio.
             </p>
           </Col>
-          <Col lg={4} sm={12}>
+          <Col lg={4} sm={12} id='profile-image-col'>
           <img id='index-profile-img' src={profileImage} alt=""/>
           </Col>
           </Row>            
@@ -59,7 +59,7 @@ export default function IndexPage() {
                 </Col>
 
                 <Col lg={4} sm={12}>
-                <div className='aboutTasks'>
+                <div className='aboutTasks' id='aboutTasks-last'>
 
                 <b>Ostalo </b>Na mom github profilu se nalaze jos dva projekta koje sam radio na fakultetu za kolegije osnove objektnog 
                 programiranja i osnove web programiranja. <a href='https://github.com/nikolaknezevic120?tab=repositories' id='link' target="_blank" rel="noopener noreferrer">

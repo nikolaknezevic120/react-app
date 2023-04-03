@@ -20,6 +20,9 @@
 .aboutTasks{
     color: white;
     text-align: justify;
+
+    line-height: 1.5em;
+    margin-top: 1em;
 }
 
 #openBtn{
@@ -154,7 +157,7 @@
     to { width: 100% }
   }
 
-@media (max-width: 768px){
+@media (max-width: 992px){
     #index-profile-img{
         border: none;
         border-radius: 50%;
@@ -195,5 +198,24 @@
 
     #index-profile-img{
         display: none;
+    }
+
+    .col-lg-8{
+        width: 100%;
+    }
+
+    .profile-image-col {
+        display: none;
+    }
+
+    .aboutTasks{
+        border-bottom: 0.25rem solid white;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(to left, white, $header-and-footer-color);
+        padding-bottom: 0.2rem;
+    }
+
+    #aboutTasks-last{
+        border-bottom: none;
     }
 }
