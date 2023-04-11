@@ -3,6 +3,10 @@
   padding: 5%;
 }
 
+.body h1 {
+  color: white;
+}
+
 #detail-label {
   text-align: center;
   border-radius: 15px;
@@ -11,5 +15,6 @@
 
 #detail-fix-label {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
 }
 /*# sourceMappingURL=body.css.map */

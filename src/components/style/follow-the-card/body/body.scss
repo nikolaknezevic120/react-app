@@ -5,10 +5,15 @@
     padding: 5%;
 }
 
+.body h1{
+    color: white
+}
+
 #detail-label {
     @include input-mixin;
 }
 
 #detail-fix-label{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
 }

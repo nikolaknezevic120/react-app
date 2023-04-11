@@ -17,10 +17,46 @@
 #openBtn{
     background-color: transparent;
     border-color: transparent;
-    transition: transform .2s;
+    color: #d4922f;
+    padding-top: 5%;
 }
 
 #openBtn:hover{
-    transform: scale(1.2);
-    animation-duration: 1.2sec;
+    visibility: visible;
+    cursor: pointer;
+}
+
+#about-me-title h3{
+    color: white;
+    font-size: 40px;
+}
+
+.text h4{
+    color: white;
+}
+
+#text-img{
+    width: 40vw;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+#mobile{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #text-img{
+        width: 75vw;
+        padding-left: 0%;
+    }
+
+    #mobile{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #desktop{
+        display: none;
+    }
 }

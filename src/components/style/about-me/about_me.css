@@ -15,16 +15,50 @@
 #openBtn {
   background-color: transparent;
   border-color: transparent;
-  -webkit-transition: -webkit-transform .2s;
-  transition: -webkit-transform .2s;
-  transition: transform .2s;
-  transition: transform .2s, -webkit-transform .2s;
+  color: #d4922f;
+  padding-top: 5%;
 }
 
 #openBtn:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-animation-duration: 1.2sec;
-          animation-duration: 1.2sec;
+  visibility: visible;
+  cursor: pointer;
+}
+
+#about-me-title h3 {
+  color: white;
+  font-size: 40px;
+}
+
+.text h4 {
+  color: white;
+}
+
+#text-img {
+  width: 40vw;
+  padding-left: 5%;
+  padding-top: 5%;
+}
+
+#mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #text-img {
+    width: 75vw;
+    padding-left: 0%;
+  }
+  #mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #desktop {
+    display: none;
+  }
 }
 /*# sourceMappingURL=about_me.css.map */

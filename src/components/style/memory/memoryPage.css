@@ -3,6 +3,10 @@
   margin-bottom: 2%;
 }
 
+.mainTitle h1 {
+  color: white;
+}
+
 .playingField {
   width: auto;
   display: -webkit-box;
@@ -11,6 +15,7 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-bottom: 2.5%;
+  padding-left: 10%;
 }
 
 .resultArea {
@@ -22,6 +27,7 @@
       flex-wrap: wrap;
   position: relative;
   padding: 5%;
+  margin-right: 10%;
   border: 0.25rem solid;
   border-radius: 20%;
   border-image-slice: 1;
@@ -170,6 +176,7 @@
   margin-left: 1rem;
   padding: 10px;
   text-align: center;
+  color: white;
 }
 
 .animation > div > div {
@@ -297,6 +304,13 @@
   .hiddenngbtn {
     margin-bottom: 5%;
     display: none;
+  }
+  .playingField {
+    padding-left: 2%;
+  }
+  .resultArea {
+    margin-right: 0%;
+    margin-left: 2%;
   }
 }
 /*# sourceMappingURL=memoryPage.css.map */
