@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { BsPinMapFill, BsFillTelephoneOutboundFill, BsEnvelopeOpenFill, BsWordpress } from "react-icons/bs";
+import { BsPinMapFill, BsFillTelephoneOutboundFill, BsEnvelopeOpenFill } from "react-icons/bs";
 import { FaReact } from "react-icons/fa";
 import { TbBrandJavascript } from "react-icons/tb";
 import { MdOutlinePageview } from "react-icons/md";
@@ -12,8 +12,6 @@ import './style/footer/footer.css';
 export default function footer() {
 
   const lang = localStorage.getItem('lang');
-
-  const link = window.location.href;
 
   if (lang === 'hr'){
     return (

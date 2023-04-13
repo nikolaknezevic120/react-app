@@ -7,10 +7,6 @@ import '../style/about-me/about_me.css';
 
 export default function AboutHr() {
 
-    const [openShort, setOpenShort] =useState(false);
-    const [openSchool, setOpenSchool] = useState(false);
-    const [openOther, setOpenOther] = useState(false);
-
   return (
     <Container fluid>
         <div id='first-page-body'>

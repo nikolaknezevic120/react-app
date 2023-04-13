@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import React from 'react';
 import '../style/about-me/about_me.css';
 import AboutHr from './aboutHr';
 import AboutEn from './aboutEn';

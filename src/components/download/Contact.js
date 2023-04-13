@@ -1,7 +1,6 @@
 import React from 'react';
 import '../style/contact-and-download/download/download.css';
 import { SocialIcon } from 'react-social-icons';
-import { FacebookShareButton, FacebookIcon } from 'react-share';
 
 export default function Contact() {
 

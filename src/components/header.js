@@ -1,5 +1,4 @@
 import React from 'react';
-import Creatable from 'react-select/creatable';
 import cro from '../components/images/images/cro.jpg';
 import eng from '../components/images/images/eng.jpg'
 
@@ -43,6 +42,8 @@ export default function header() {
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item href='https://github.com/nikolaknezevic120?tab=repositories' target="_blank" rel="noopener noreferrer">
                                   Ostali radovi</NavDropdown.Item>
+                                <NavDropdown.Item href='./#/word-press' target="_blank" rel="noopener noreferrer">
+                                  WordPress</NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Link href="./#/download-and-contact">Kontakt</Nav.Link>
                         </Nav>
@@ -87,6 +88,8 @@ export default function header() {
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item href='https://github.com/nikolaknezevic120?tab=repositories' target="_blank" rel="noopener noreferrer">
                                   Other</NavDropdown.Item>
+                                <NavDropdown.Item href='./#/word-press' target="_blank" rel="noopener noreferrer">
+                                  WordPress</NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Link href="./#/download-and-contact">Contact</Nav.Link>
                         </Nav>

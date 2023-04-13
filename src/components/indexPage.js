@@ -6,7 +6,6 @@ import './style/index-page/index-page.css';
 
 export default function IndexPage() {
   
-  const [textOpen, setTextOpen] = useState(false);
   const defaultLang = localStorage.getItem('lang');
   
   if (defaultLang === 'hr'){

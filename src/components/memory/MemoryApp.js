@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import '../../components/style/memory/memoryPage.css';
 
@@ -91,7 +91,7 @@ export default function MemoryApp() {
         setOpenImg([]);
         
         setIsEnabled(true);
-        if(pairs == 7){
+        if(pairs === 7){
           setGameOver(true);
         }
       } else {
