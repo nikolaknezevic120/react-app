@@ -278,14 +278,14 @@
 
 @media (max-width: 768px) {
   .image-row-clicked img {
-    width: 19vw;
-    height: 19vw;
+    width: 17vw;
+    height: 17vw;
     margin: 5px;
     border-radius: 5px;
   }
   .image-row img {
-    width: 19vw;
-    height: 19vw;
+    width: 17vw;
+    height: 17vw;
     margin: 5px;
     border-radius: 5px;
   }

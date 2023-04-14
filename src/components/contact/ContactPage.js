@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import '../style/contact-and-download/body/body.css';
-import Contact from './Contact';
+import ContactHr from './ContactHr';
+import ContactEn from './ContactEn';
 import ContactForm from './Contact-form';
 
 export default function ContactPage() {
@@ -14,7 +15,7 @@ export default function ContactPage() {
           <h3>Opcije za kontakt</h3>
           <Row>
             <Col lg={6} sm={12}>
-              <Contact />
+              <ContactHr />
             </Col>
             
             <Col lg={6} sm={12}>
@@ -32,7 +33,7 @@ export default function ContactPage() {
           <h3>Contact options</h3>
           <Row>
             <Col lg={6} sm={12}>
-              <Contact />
+              <ContactEn />
             </Col>
             
             <Col lg={6} sm={12}>

@@ -189,7 +189,9 @@
   #describe-bottom-about-mob {
     display: block;
     text-align: left;
+    padding-top: 5%;
     margin-left: 10%;
+    margin-right: 5%;
     font-family: "Segoe UI", sans-serif;
     color: #d4922f;
   }

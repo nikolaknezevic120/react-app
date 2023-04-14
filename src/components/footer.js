@@ -18,7 +18,7 @@ export default function footer() {
       <div className="footer-div">
                 <Container>
                   <Row>
-                    <Col lg={3} sm={12}>
+                    <Col lg={4} md={5} sm={12}>
                       <h5 id="h5-foot">Linkovi</h5>
                     
                       <Row>
@@ -44,27 +44,27 @@ export default function footer() {
                       </Row>
                     </Col>
 
-                    <Col lg={3} sm={5}>
+                    <Col lg={4} md={6} sm={6}>
                       <Row>
                         <h5 id="h5-foot">Podijeli</h5>
                       </Row>
                       
                       <Row>
-                      <Col lg={12} xs={4}>
+                      <Col lg={4} xs={4}>
                           <p className='icons'>
                             <FacebookShareButton url={'http://46.101.104.236:3000'} quote={'Dummy text!'}hashtag="#muo">
                               <FacebookIcon size={32} round />
                             </FacebookShareButton> 
                           </p>
                         </Col>
-                        <Col lg={12} xs={4}>
+                        <Col lg={4} md={4} xs={4}>
                           <p className='icons'>
                             <WhatsappShareButton url={'http://46.101.104.236:3000'}>
                               <WhatsappIcon size={32} round />
                             </WhatsappShareButton>
                           </p>
                         </Col>
-                        <Col lg={12} xs={4}>
+                        <Col lg={4} xs={4}>
                           <p className='icons'>
                             <EmailShareButton url={'http://46.101.104.236:3000'}>
                               <EmailIcon size={32} round />
@@ -74,7 +74,7 @@ export default function footer() {
                       </Row>
                     </Col>
 
-                    <Col lg={3} sm={5}>
+                    <Col lg={4} md={12} sm={6}>
                       <h5 id="h5-foot">Kontakt</h5>
                         <p><BsFillChatSquareTextFill /><a href='#/download-and-contact'> Pošaljite email odmah.</a></p>
 
@@ -83,11 +83,7 @@ export default function footer() {
                         <p><BsEnvelopeOpenFill /> Mail: <a href="mailto:nikola120k@gmail.com"> nikola120k@gmail.com </a></p>
                     </Col>
 
-                    <Col lg={3} sm={12}>
-                      <h5 id="h5-foot">Adresa</h5>
-                      <p><BsPinMapFill /> Ulica Roberta Frangeša Mihanovića 69, <br />
-                          23000, Zadar</p>
-                    </Col>
+
                   </Row>
   
                   <Row>
@@ -101,63 +97,75 @@ export default function footer() {
   } else {
 
     return (
-
       <div className="footer-div">
                 <Container>
                   <Row>
-                    <Col>
+                    <Col lg={4} md={5} sm={12}>
+                      <h5 id="h5-foot">Links</h5>
+                    
                       <Row>
-                        <h5 id="h5-foot">Links</h5>
-                          <Col>
-                            <h6>Main links</h6>
+                        <Col>
+                          <h6>Main links</h6>
                             <h6> <a href="#/index" id='links'><MdOutlinePageview /> Home page</a></h6>
                             <h6> <a href="#/about" id='links'><MdOutlinePageview /> About me</a></h6>
-                          </Col>
-                          <Col>
-                            <h6>Links on projects</h6>
+                        </Col>
+                        
+                        <Col>
+                          <h6>Links on projects</h6>
                             <h6> <a href="#/login" id='links'><FaReact /> 
-                              Follow the card</a>
+                                Follow the card</a>
                             </h6>
-                            <h6> <a href="#/infinite_slider" id='links'><TbBrandJavascript />
-                              Infinite slider</a>
-                            </h6>
-                            <h6> <a href="#/memory" id='links'><FaReact /> 
-                              Memory App</a>
-                            </h6>
-                          </Col>
+                          <h6> <a href="#/infinite_slider" id='links'><TbBrandJavascript />
+                                Infinite slider</a>
+                          </h6>
+                          
+                          <h6> <a href="#/memory" id='links'><FaReact /> 
+                            Memory App</a>
+                          </h6>
+                        </Col>
                       </Row>
                     </Col>
-                    <Col>
-                  <h5 id="h5-foot">Share</h5>
-                  <p className='icons'>
-                    <FacebookShareButton url={'http://46.101.104.236:3000'} quote={'Dummy text!'}hashtag="#muo">
-                      <FacebookIcon size={32} round />
-                    </FacebookShareButton> 
-                  </p>
-                  <p className='icons'>
-                    <WhatsappShareButton url={'http://46.101.104.236:3000'}>
-                      <WhatsappIcon size={32} round />
-                    </WhatsappShareButton>
-                  </p>
-                  <p className='icons'>
-                    <EmailShareButton url={'http://46.101.104.236:3000'}>
-                      <EmailIcon size={32} round />
-                    </EmailShareButton>
-                  </p>
-                  </Col>
-                    <Col>
-                      <h5 id="h5-foot">Adress</h5>
-                      <p><BsPinMapFill /> Ulica Roberta Frangeša Mihanovića 69, <br />
-                          23000, Zadar</p>
+
+                    <Col lg={4} md={6} sm={6}>
+                      <Row>
+                        <h5 id="h5-foot">Share</h5>
+                      </Row>
+                      
+                      <Row>
+                      <Col lg={4} xs={4}>
+                          <p className='icons'>
+                            <FacebookShareButton url={'http://46.101.104.236:3000'} quote={'Dummy text!'}hashtag="#muo">
+                              <FacebookIcon size={32} round />
+                            </FacebookShareButton> 
+                          </p>
+                        </Col>
+                        <Col lg={4} xs={4}>
+                          <p className='icons'>
+                            <WhatsappShareButton url={'http://46.101.104.236:3000'}>
+                              <WhatsappIcon size={32} round />
+                            </WhatsappShareButton>
+                          </p>
+                        </Col>
+                        <Col lg={4} xs={4}>
+                          <p className='icons'>
+                            <EmailShareButton url={'http://46.101.104.236:3000'}>
+                              <EmailIcon size={32} round />
+                            </EmailShareButton>
+                          </p>
+                        </Col>
+                      </Row>
                     </Col>
-  
-                    <Col>
+
+                    <Col lg={4} md={12} sm={6}>
                       <h5 id="h5-foot">Contact</h5>
                         <p><BsFillChatSquareTextFill /><a href='#/download-and-contact'> Send me mail.</a></p>
+
                         <p><BsFillTelephoneOutboundFill /> Mob: <a href="tel:+385958409108"> 095 840 91 08 </a></p>
+
                         <p><BsEnvelopeOpenFill /> Mail: <a href="mailto:nikola120k@gmail.com"> nikola120k@gmail.com </a></p>
                     </Col>
-                  
+
+
                   </Row>
   
                   <Row>
@@ -167,6 +175,7 @@ export default function footer() {
                   </Row>
                 </Container>
               </div>
+      
     )
 
   }

@@ -4,7 +4,7 @@ import LogIn from "./components/follow_the_card/component/LogIn";
 import indexPage from "./components/indexPage";
 import infinite_slider from "./components/infinite_slider/infinite_slider";
 import WordPress_Page from "./components/WordPress/WordPress_Page";
-import ContactPage from "./components/download/ContactPage";
+import ContactPage from "./components/contact/ContactPage";
 import Memory from "./components/memory/Memory";
 
 import {Navigate, Route, Routes} from "react-router-dom";
