@@ -18,7 +18,7 @@ export function CardDetailEn(props) {
             <p className="card-text">Owner surname: {props.ownerSecondName}</p>
             <p className="card-text">Validate: {props.validate[0]}{props.validate[1]}/{props.validate[2]}{props.validate[3]}</p>
             {
-                show?<p className="card-text">Avaliable: {props.avaliable} HRK</p>:null
+                show?<p className="card-text">Avaliable: {props.avaliable} EUR</p>:null
             }
             {     
                 show?<div className="card-text">

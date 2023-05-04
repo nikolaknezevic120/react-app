@@ -32,10 +32,7 @@
     }
 
 .navbar-nav .show > .nav-link{
-    color: $body-bckg-col;
-    background-image: linear-gradient($body-bckg-col, white);
-    border-top-right-radius: 15%;
-    border-top-left-radius: 15%;
+    color: #d4922f;
 }
 
 .dropdown-item:hover{
@@ -54,13 +51,16 @@
 }
 
 .navbar-expand-lg .navbar-nav .dropdown-menu{
-    background-color: white;
+    background-color:  $body-bckg-col;
     animation: fadeIn 1s;
     overflow: hidden;
 
     margin: 0px;
     border: 1px solid white;
     border-top-left-radius: 0px;
+}
+.dropdown-item{
+    color: #d4922f;
 }
 
 #translateBtn{

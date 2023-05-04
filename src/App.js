@@ -3,9 +3,9 @@ import follow_the_card from "./components/follow_the_card/follow_the_card";
 import LogIn from "./components/follow_the_card/component/LogIn";
 import indexPage from "./components/indexPage";
 import infinite_slider from "./components/infinite_slider/infinite_slider";
-import WordPress_Page from "./components/WordPress/WordPress_Page";
 import ContactPage from "./components/contact/ContactPage";
 import Memory from "./components/memory/Memory";
+import WebShop from "./components/webshop/webShop";
 
 import {Navigate, Route, Routes} from "react-router-dom";
 
@@ -18,7 +18,7 @@ function App() {
       <Route path="/followTheCard" element={follow_the_card()} /> 
       <Route path="/login" element={LogIn()} />
       <Route path="/infinite_slider" element={infinite_slider()} /> 
-      <Route path="/word-press" element={WordPress_Page()} />
+      <Route path="/webShop" element={WebShop()} />      
       <Route path="/download-and-contact" element={ContactPage()} />
       <Route path="/memory" element={Memory()}/>
     </Routes>
