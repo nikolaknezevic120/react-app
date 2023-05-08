@@ -1,38 +1,42 @@
 import React from 'react';
+import { useState } from 'react';
 import { Button } from 'react-bootstrap';
+import RadioGroupFunc from './radioGroup';
 
-export default function payMethod() {
-  if (localStorage.getItem('lang') === 'hr'){
-  return (
-    <div className='payMethodDiv'>
-      <p>Odaberite način plaćanja</p>
-      <div className='choosePayMethod'>
-        <input type="radio" value="Pouzece" id="payMeth" />
-        <label htmlFor="regular">Pouzećem</label>
-        <input type="radio" value="Kartica" id="payMeth" />
-        <label htmlFor="regular">Kartica</label>
-        <input type="radio" value="PayPal" id="payMeth" />
-        <label htmlFor="regular">PayPal</label>
+export default function PayMethod() {
+
+  const payOptions = ['Pouzeće', 'Kartica', 'PayPal'];
+  const payOptionsEn = ['Cash on delivery', 'Card', 'PayPal'];
+  const [selectedPayOption, setSelectedPayOption] = useState('');
+  
+  const handleOptionChange = (event) => {
+    setSelectedPayOption(event.target.value);
+    localStorage.setItem('payMethod', event.target.value);
+  };
+
+  if (localStorage.getItem('lang') === 'hr') {
+    return (
+      <div className='payMethodDiv'>
+        <p>Odaberite način plaćanja</p>
+        <div className='choosePayMethod'>
+          <RadioGroupFunc
+            options={payOptions}
+            selectedOption={selectedPayOption}
+            onChange={handleOptionChange}
+          />
+        </div>
       </div>
-      <div className='payMethodBtn>'>
-        <Button id='finishOrder'>Zavrsi</Button>
-      </div>
-    </div>
-  )
+    )
   } else {
     return (
       <div className='payMethodDiv'>
         <p>Choose a payment method</p>
         <div className='choosePayMethod'>
-          <input type="radio" value="Pouzece" id="payMeth" />
-          <label htmlFor="regular">Cash on delivery</label>
-          <input type="radio" value="Kartica" id="payMeth" />
-          <label htmlFor="regular">Card</label>
-          <input type="radio" value="PayPal" id="payMeth" />
-          <label htmlFor="regular">PayPal</label>
-        </div>
-        <div className='payMethodBtn>'>
-          <Button id='finishOrder'>Finish order</Button>
+          <RadioGroupFunc
+            options={payOptionsEn}
+            selectedOption={selectedPayOption}
+            onChange={handleOptionChange}
+          />
         </div>
       </div>
     )

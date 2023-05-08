@@ -10,7 +10,6 @@ export default function RadioGroupFunc({ options, selectedOption, onChange }) {
                         type="radio"
                         name="option"
                         value={option}
-                        checked={selectedOption === option}
                         onChange={onChange}
                     />
                     {option}
