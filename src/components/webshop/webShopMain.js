@@ -6,6 +6,7 @@ import Counter from './counter';
 import UserInput from './userInput';
 import PayMethod from './payMethod';
 import ModalOrder from './modal';
+import ConfirmOrder from './confirmOrder';
 
 import img1 from '../images/webShopImg/hajduk1.jpg';
 import img2 from '../images/webShopImg/hajduk2.png'
@@ -35,6 +36,7 @@ export default function WebShopMain() {
   const [showContinueOrder, setShowContinueOrder] = useState(false);
   const [finishOrder, setFinishOrder] = useState(false);
   const [showCart, setShowCart] = useState(false);
+  const [cartIcon, setCartIcon] = useState(true);
 
   const price = 50.00.toFixed(2);
   const price1 = 45.68
@@ -54,10 +56,11 @@ export default function WebShopMain() {
 
   const [showOrder, setShowOrder] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [confirm, setConfirm] = useState(false);
 
-  const handleTextAreaChange = (event) => {
+  function handleTextAreaChange(event) {
     setText(event.target.value);
-  };
+  }
 
   const [selectedOption, setSelectedOption] = useState('XS');
   const handleOptionChange = (event) => {
@@ -218,12 +221,18 @@ export default function WebShopMain() {
 
   const finishOrderOnClick = () => {
     setShowCart(false);
-    setShowOrder(true);
+    setShowOrder(false);
     setShowContinueOrder(false);
     setFinishOrder(false);
-    setShowModal(true);
+    setShowModal(false);
     setOrderId(orderId => orderId + 1);
     setFinishedOrder(text);
+    setCartIcon(false);
+    setConfirm(true);
+
+    setTimeout(() => {
+      window.location.reload();
+    }, 3000);
   }
 
   const backToOrder = () => {
@@ -335,10 +344,10 @@ export default function WebShopMain() {
           </Col>
 
           <Col xs={12} md={3}>
-            <figure className='shopCartCnt'>
+            {cartIcon ? <figure className='shopCartCnt'>
               <img id='shoppingCartImg' src={cartImg} />
               <figcaption className='figure-caption text-center'>{orderedNum}</figcaption>
-            </figure>
+            </figure> : null}
             {showCart ?
               <div className='cart'>
                 <textarea value={text} onChange={handleTextAreaChange} disabled={true} />
@@ -354,6 +363,7 @@ export default function WebShopMain() {
             {finishOrder ? <Button id='finishOrder' onClick={finishOrderOnClick}>Završi</Button> : null}
             {showModal ? <ModalOrder /> : null}
             {showModal ? <Button id='finishOrder' onClick={backToOrder}>Povratak</Button> : null}
+            {confirm ? <ConfirmOrder /> : null}
             <div className='payMethodBtn>'>
             </div>
           </Col>
@@ -462,10 +472,10 @@ export default function WebShopMain() {
           </Col>
 
           <Col xs={12} md={3}>
-            <figure className='shopCartCnt'>
+            { cartIcon ? <figure className='shopCartCnt'>
               <img id='shoppingCartImg' src={cartImg} />
               <figcaption className='figure-caption text-center'>{orderedNum}</figcaption>
-            </figure>
+            </figure> : null }
             {showCart ?
               <div className='cart'>
                 <textarea value={text} onChange={handleTextAreaChange} disabled={true} />
@@ -481,6 +491,7 @@ export default function WebShopMain() {
             {finishOrder ? <Button id='finishOrder' onClick={finishOrderOnClick}>Finish</Button> : null}
             {showModal ? <ModalOrder /> : null}
             {showModal ? <Button id='finishOrder' onClick={backToOrder}>Back</Button> : null}
+            {confirm ? <ConfirmOrder /> : null}
             <div className='payMethodBtn>'>
             </div>
           </Col>
