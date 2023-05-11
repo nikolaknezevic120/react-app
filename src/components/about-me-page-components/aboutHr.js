@@ -23,7 +23,7 @@ export default function AboutHr() {
                         <h4>Tko je Nikola?</h4>
                         
                         <p>
-                            Ukratko, ja sam mlada osoba koja se zainteresirala u frontend development nakon prvog kontakta 
+                            Ukratko, mlada sam osoba koja se zainteresirala u frontend development nakon prvog kontakta 
                             sa frontendom. Za sebe smatram kako posjedujem potencijal i volju za napredak.
                         </p>
 
@@ -112,7 +112,7 @@ export default function AboutHr() {
                     <div class="text">
                         <h4>Radi li Nikola jos nešto, ima li hobije?</h4>
                             <p>
-                                Naravno, ja sam zaljubeljenik u glazbu i sport. Trenirao sam dugo veslanje i sviram harmoniku. 
+                                Naravno, zaljubeljenik sam u glazbu i sport. Trenirao sam dugo veslanje i sviram harmoniku. 
                                 Volim pošlusati sve glazbene žanrove i pogledati svaki sport od veslanja i skijanja do rukometa 
                                 i nogometa. Trenutno sviram harmoniku, idem u teretanu i vozim bicikl.
                             </p>
