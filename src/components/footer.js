@@ -12,6 +12,7 @@ import './style/footer/footer.css';
 export default function footer() {
 
   const lang = localStorage.getItem('lang');
+  const webAdress = window.location.toString();
 
   if (lang === 'hr'){
     return (
@@ -52,21 +53,21 @@ export default function footer() {
                       <Row>
                       <Col lg={4} xs={4}>
                           <p className='icons'>
-                            <FacebookShareButton url={'http://46.101.104.236:3000'} quote={'Dummy text!'}hashtag="#muo">
+                            <FacebookShareButton url={webAdress} quote={'Dummy text!'}hashtag="#muo">
                               <FacebookIcon size={32} round />
                             </FacebookShareButton> 
                           </p>
                         </Col>
                         <Col lg={4} md={4} xs={4}>
                           <p className='icons'>
-                            <WhatsappShareButton url={'http://46.101.104.236:3000'}>
+                            <WhatsappShareButton url={webAdress}>
                               <WhatsappIcon size={32} round />
                             </WhatsappShareButton>
                           </p>
                         </Col>
                         <Col lg={4} xs={4}>
                           <p className='icons'>
-                            <EmailShareButton url={'http://46.101.104.236:3000'}>
+                            <EmailShareButton url={webAdress}>
                               <EmailIcon size={32} round />
                             </EmailShareButton>
                           </p>
@@ -134,21 +135,21 @@ export default function footer() {
                       <Row>
                       <Col lg={4} xs={4}>
                           <p className='icons'>
-                            <FacebookShareButton url={'http://46.101.104.236:3000'} quote={'Dummy text!'}hashtag="#muo">
+                            <FacebookShareButton url={webAdress} quote={'Dummy text!'}hashtag="#muo">
                               <FacebookIcon size={32} round />
                             </FacebookShareButton> 
                           </p>
                         </Col>
                         <Col lg={4} xs={4}>
                           <p className='icons'>
-                            <WhatsappShareButton url={'http://46.101.104.236:3000'}>
+                            <WhatsappShareButton url={webAdress}>
                               <WhatsappIcon size={32} round />
                             </WhatsappShareButton>
                           </p>
                         </Col>
                         <Col lg={4} xs={4}>
                           <p className='icons'>
-                            <EmailShareButton url={'http://46.101.104.236:3000'}>
+                            <EmailShareButton url={webAdress}>
                               <EmailIcon size={32} round />
                             </EmailShareButton>
                           </p>

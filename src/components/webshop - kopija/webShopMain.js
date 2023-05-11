@@ -3,7 +3,10 @@ import { useState } from 'react';
 import { Container, Col, Row, Button } from 'react-bootstrap';
 import RadioGroupFunc from './radioGroup';
 import Counter from './counter';
-import CheckCart from './checkCart';
+import UserInput from './userInput';
+import PayMethod from './payMethod';
+import ModalOrder from './modal';
+import ConfirmOrder from './confirmOrder';
 
 import img1 from '../images/webShopImg/hajduk1.jpg';
 import img2 from '../images/webShopImg/hajduk2.png'
@@ -22,7 +25,6 @@ export default function WebShopMain() {
   const orderIdLocalStorage = localStorage.setItem('orderId', orderId);
   const [finishedOrder, setFinishedOrder] = useState('');
   const finishedOrderLocalStorafe = localStorage.setItem('finishedOrder', finishedOrder);
-  const [showCart, setShowCart] = useState(false);
 
   const itemOrder = ' domaći dres\nveličina: ';
   const item1order = ' gostujući dres\nveličina: ';
@@ -31,8 +33,13 @@ export default function WebShopMain() {
   const item4order = ' šalica\n';
   const item5order = ' upaljač\n';
 
+  const [showContinueOrder, setShowContinueOrder] = useState(false);
+  const [finishOrder, setFinishOrder] = useState(false);
+  const [showCart, setShowCart] = useState(false);
+  const [cartIcon, setCartIcon] = useState(true);
+
   const price = 50.00.toFixed(2);
-  const price1 = 45.68
+  const price1 = 45.68;
   const price2 = 42.75;
   const price3 = 14.55;
   const price4 = 13.65;
@@ -47,12 +54,13 @@ export default function WebShopMain() {
   const [sum, setSum] = useState(0);
   const [orderedNum, setOrderedNum] = useState(0);
 
+  const [showOrder, setShowOrder] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [confirm, setConfirm] = useState(false);
+
   function handleTextAreaChange(event) {
     setText(event.target.value);
   }
-
-  const [names, setNames] = useState([]);
-  localStorage.setItem("items", JSON.stringify(names));
 
   const [selectedOption, setSelectedOption] = useState('XS');
   const handleOptionChange = (event) => {
@@ -60,10 +68,6 @@ export default function WebShopMain() {
   };
 
   const options = ['XS', 'S', 'M', 'L', 'XL'];
-
-  const viewCart = (event) => {
-    setShowCart(!showCart);
-  }
 
   const [num, setNum] = useState(0);
   const plusNum = (event) => {
@@ -141,7 +145,7 @@ export default function WebShopMain() {
       setOrderedNum(orderedNum => orderedNum + num);
       setText(text + newText);
       setNum(0);
-      setNames(current => [...current, newText]);
+      setShowCart(true);
       setSum(sum + num * price);
     }
   };
@@ -151,7 +155,7 @@ export default function WebShopMain() {
       setOrderedNum(orderedNum => orderedNum + num1);
       setText(text + newText);
       setNum1(0);
-      setNames(current => [...current, newText]);
+      setShowCart(true);
       setSum(sum + num1 * price1);
     }
   };
@@ -160,8 +164,8 @@ export default function WebShopMain() {
       const newText = num2 + item2order + selectedOption + '\n';
       setOrderedNum(orderedNum => orderedNum + num2);
       setText(text + newText);
-      setNames(current => [...current, newText]);
       setNum2(0);
+      setShowCart(true);
       setSum(sum + num2 * price2);
     }
   };
@@ -170,8 +174,8 @@ export default function WebShopMain() {
       const newText = num3 + item3order + '\n';
       setText(text + newText);
       setOrderedNum(orderedNum => orderedNum + num3);
-      setNames(current => [...current, newText]);
       setNum3(0);
+      setShowCart(true);
       setSum(sum + num3 * price3);
     }
   };
@@ -180,8 +184,8 @@ export default function WebShopMain() {
       const newText = num4 + item4order + '\n';
       setText(text + newText);
       setOrderedNum(orderedNum => orderedNum + num4);
-      setNames(current => [...current, newText]);
       setNum4(0);
+      setShowCart(true);
       setSum(sum + num4 * price4);
     }
   };
@@ -190,36 +194,54 @@ export default function WebShopMain() {
       const newText = num5 + item5order + '\n';
       setText(text + newText);
       setOrderedNum(orderedNum => orderedNum + num5);
-      setNames(current => [...current, newText]);
       setNum5(0);
+      setShowCart(true);
       setSum(sum + num5 * price5);
     }
   };
 
   const clearCart = (event) => {
     setText('');
+    setShowContinueOrder(false);
+    setFinishOrder(false);
+    setShowCart(false);
     setOrderedNum(0);
-    document.location.reload();
   }
 
   const continueOrder = (event) => {
     if (text != 'Vasa kosarica\n') {
       setText(text + 'ukupan iznos: ' + sum.toFixed(2) + '€.');
-      setTimeout(() => {
-        document.location.reload();
-      }, 0.1);
+      setShowContinueOrder(true);
     }
   }
 
+  const finishOrderFunc = (event) => {
+    setFinishOrder(true);
+  }
+
   const finishOrderOnClick = () => {
+    setShowCart(false);
+    setShowOrder(false);
+    setShowContinueOrder(false);
+    setFinishOrder(false);
+    setShowModal(false);
     setOrderId(orderId => orderId + 1);
     setFinishedOrder(text);
+    setCartIcon(false);
+    setConfirm(true);
 
     setTimeout(() => {
       window.location.reload();
     }, 3000);
   }
 
+  const backToOrder = () => {
+    setShowCart(true);
+    setShowOrder(true);
+    setShowContinueOrder(true);
+    setFinishOrder(true);
+    setShowModal(false);
+  }
 
   if (localStorage.getItem('lang') === 'hr') {
     return (
@@ -321,26 +343,29 @@ export default function WebShopMain() {
             </div>
           </Col>
 
-          <Col xs={12} md={3} >
-            <figure className='shopCartCnt'>
+          <Col xs={12} md={3}>
+            {cartIcon ? <figure className='shopCartCnt'>
               <img id='shoppingCartImg' src={cartImg} />
               <figcaption className='figure-caption text-center'>{orderedNum}</figcaption>
-            </figure>
-            <div className='cart'>
-              <div className='cartOptions'>
-                <Row>
+            </figure> : null}
+            {showCart ?
+              <div className='cart'>
+                <textarea value={text} onChange={handleTextAreaChange} disabled={true} />
+                <div className='cartOptions'>
                   <Button id='cartBtn' onClick={clearCart}>Isprazni</Button>
-                  <Button id='cartBtn' onClick={viewCart}>Pregledaj</Button>
-                  <Button id='cartBtn' role='cartBtn' href='./#/webShop/orderpage' onClick={continueOrder} >Nastavi</Button>
-                </Row>
-              </div>
+                  <Button id='cartBtn' onClick={continueOrder}>Nastavi sa kupnjom</Button>
+                </div>
+              </div> : null
+            }
+            {showContinueOrder ? <UserInput /> : null}
+            {showContinueOrder ? <Button id='finishOrder' onClick={finishOrderFunc}>Plaćanje</Button> : null}
+            {finishOrder ? <PayMethod /> : null}
+            {finishOrder ? <Button id='finishOrder' onClick={finishOrderOnClick}>Završi</Button> : null}
+            {showModal ? <ModalOrder /> : null}
+            {showModal ? <Button id='finishOrder' onClick={backToOrder}>Povratak</Button> : null}
+            {confirm ? <ConfirmOrder /> : null}
+            <div className='payMethodBtn>'>
             </div>
-
-            <Row>
-              <div className='xcxcx'>
-                {showCart ? <textarea value={text} disabled={true} /> : null}
-              </div>
-            </Row>
           </Col>
         </Row>
 
@@ -447,25 +472,28 @@ export default function WebShopMain() {
           </Col>
 
           <Col xs={12} md={3}>
-            <figure className='shopCartCnt'>
+            { cartIcon ? <figure className='shopCartCnt'>
               <img id='shoppingCartImg' src={cartImg} />
               <figcaption className='figure-caption text-center'>{orderedNum}</figcaption>
-            </figure>
-            <div className='cart'>
-              <div className='cartOptions'>
-                <Row>
+            </figure> : null }
+            {showCart ?
+              <div className='cart'>
+                <textarea value={text} onChange={handleTextAreaChange} disabled={true} />
+                <div className='cartOptions'>
                   <Button id='cartBtn' onClick={clearCart}>Empty</Button>
-                  <Button id='cartBtn' onClick={viewCart}>View cart</Button>
-                  <Button id='cartBtn' role='cartBtn' href='./#/webShop/orderpage' onClick={continueOrder}>Continue</Button>
-                </Row>
-              </div>
+                  <Button id='cartBtn' onClick={continueOrder}>Continue</Button>
+                </div>
+              </div> : null
+            }
+            {showContinueOrder ? <UserInput /> : null}
+            {showContinueOrder ? <Button id='finishOrder' onClick={finishOrderFunc}>Payment</Button> : null}
+            {finishOrder ? <PayMethod /> : null}
+            {finishOrder ? <Button id='finishOrder' onClick={finishOrderOnClick}>Finish</Button> : null}
+            {showModal ? <ModalOrder /> : null}
+            {showModal ? <Button id='finishOrder' onClick={backToOrder}>Back</Button> : null}
+            {confirm ? <ConfirmOrder /> : null}
+            <div className='payMethodBtn>'>
             </div>
-
-            <Row>
-              <div className='xcxcx'>
-                {showCart ? <textarea value={text} disabled={true} /> : null}
-              </div>
-            </Row>
           </Col>
         </Row>
 
@@ -473,4 +501,3 @@ export default function WebShopMain() {
     )
   }
 }
-

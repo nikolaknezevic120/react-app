@@ -9,6 +9,11 @@ body
   position:relative;
   top:30%;
   left:50%;
+
+  display: flex;
+  margin-top: 10%;
+  flex-direction: column;
+
   transform:translate(-50%,-50%);
   width:150px;
   height:150px;
@@ -89,6 +94,7 @@ body
 
 @media screen and (max-width: 480px) {
     .ring{
-        top: 40%;
+      display: flex;
+      margin-top: 50%;
     }
 }

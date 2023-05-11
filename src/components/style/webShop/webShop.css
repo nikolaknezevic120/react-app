@@ -1,4 +1,5 @@
-h1, h4 {
+h1,
+h4 {
   color: white;
 }
 
@@ -32,9 +33,11 @@ h1, h4 {
           transform: none;
 }
 
-#cartBtn {
+#cartBtn, [role=cartBtn] {
   -webkit-transform: none;
           transform: none;
+  margin-top: 5%;
+  width: 100%;
 }
 
 textarea {
@@ -81,6 +84,7 @@ h5 {
   display: flex;
   -webkit-column-gap: 10%;
           column-gap: 10%;
+  padding-left: 15%;
 }
 
 .userInput input {
@@ -124,12 +128,13 @@ figure {
           flex-flow: column;
   padding: 5px;
   height: 5vw;
+  padding-left: 75%;
 }
 
 figcaption {
   background-color: blue;
   padding-bottom: 0%;
-  margin-top: -20%;
+  margin-top: -100%;
   margin-left: 15%;
   width: 2.5vw;
   height: 2.5vw;
@@ -142,8 +147,16 @@ figcaption {
   color: white;
 }
 
+#header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  z-index: 1;
+}
+
 @media screen and (max-width: 480px) {
-  #ctnResBtn, #ctnBtn {
+  #ctnResBtn,
+  #ctnBtn {
     width: 10vw;
     height: 10vw;
   }
@@ -155,7 +168,8 @@ figcaption {
             transform: none;
     margin-top: 5vw;
     margin-bottom: 10vw;
-    width: 50%;
+    width: 75%;
+    margin-left: 12.5%;
   }
   #imgShop {
     width: 60vw;
@@ -170,6 +184,16 @@ figcaption {
   }
   textarea {
     height: 30vw;
+  }
+  .navbar-toggler {
+    margin-left: 37%;
+    width: 26%;
+    margin-top: 5px;
+  }
+  #header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: -65px;
   }
 }
 /*# sourceMappingURL=webShop.css.map */

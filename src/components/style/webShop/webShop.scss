@@ -1,24 +1,25 @@
-h1, h4{
+h1,
+h4 {
     color: white;
 }
 
-#imgShop{
+#imgShop {
     width: 20vw;
     max-height: 20vw;
 }
 
-#shopItem{
+#shopItem {
     width: 2vw;
     height: 2vw;
 }
 
-.shopElements{
+.shopElements {
     display: flex;
     row-gap: 1%;
     column-gap: 1%;
 }
 
-#shopBtn{
+#shopBtn {
     width: 20vw;
     height: 40px;
     background-color: blue;
@@ -28,11 +29,13 @@ h1, h4{
     transform: none;
 }
 
-#cartBtn{
+#cartBtn, [role=cartBtn] {
     transform: none;
+    margin-top: 5%;
+    width: 100%;
 }
 
-textarea{
+textarea {
     height: 15vw;
     width: 100%;
     background-color: transparent;
@@ -42,16 +45,16 @@ textarea{
     resize: none;
 }
 
-label{
+label {
     color: white;
     margin-right: 5%;
 }
 
-h5{
+h5 {
     color: white;
 }
 
-#ctnBtn{
+#ctnBtn {
     background-color: transparent;
     padding: 0%;
     margin-right: 1vw;
@@ -60,7 +63,7 @@ h5{
     transform: none;
 }
 
-#ctnResBtn{
+#ctnResBtn {
     padding: 0%;
     margin-right: 1vw;
     width: 4vw;
@@ -68,12 +71,13 @@ h5{
     transform: none;
 }
 
-.cartOptions{
+.cartOptions {
     display: flex;
     column-gap: 10%;
+    padding-left: 15%;
 }
 
-.userInput input{
+.userInput input {
     background-color: transparent;
     border: 1px solid white;
     margin-top: 2%;
@@ -81,24 +85,24 @@ h5{
     color: white;
 }
 
-.userInput p{
+.userInput p {
     padding-top: 10%;
 }
 
-.payMethodDiv p{
+.payMethodDiv p {
     padding-top: 10%;
 }
 
-#finishOrder{
+#finishOrder {
     margin-top: 5%;
     transform: none;
 }
 
-#shoppingCartImg{
+#shoppingCartImg {
     width: 5vw;
 }
 
-.choosePayMethod .divLabel{
+.choosePayMethod .divLabel {
     display: grid;
 }
 
@@ -107,12 +111,13 @@ figure {
     flex-flow: column;
     padding: 5px;
     height: 5vw;
+    padding-left: 75%;
 }
 
 figcaption {
     background-color: blue;
     padding-bottom: 0%;
-    margin-top: -20%;
+    margin-top: -100%;
     margin-left: 15%;
     width: 2.5vw;
     height: 2.5vw;
@@ -124,39 +129,61 @@ figcaption {
     font-style: italic;
     color: white;
 }
+
+#header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    z-index: 1;
+}
+
 @media screen and (max-width: 480px) {
-    
-    #ctnResBtn, #ctnBtn{
+
+    #ctnResBtn,
+    #ctnBtn {
         width: 10vw;
         height: 10vw;
     }
 
-    h5{
+    h5 {
         margin-top: 5vw;
     }
 
-    #shopBtn{
+    #shopBtn {
         transform: none;
         margin-top: 5vw;
         margin-bottom: 10vw;
-        width: 50%;
+        width: 75%;
+        margin-left: 12.5%;
     }
 
-    #imgShop{
+    #imgShop {
         width: 60vw;
         max-height: 50vw;
         padding-left: 25%;
     }
 
-    #shoppingCartImg{
+    #shoppingCartImg {
         display: none;
     }
 
-    .text-center{
+    .text-center {
         display: none;
     }
 
-    textarea{
+    textarea {
         height: 30vw;
     }
-  }
+
+    .navbar-toggler {
+        margin-left: 37%;
+        width: 26%;
+        margin-top: 5px;
+    }
+
+    #header {
+        position: -webkit-sticky;
+        position: sticky;
+        top: -65px;
+    }
+}

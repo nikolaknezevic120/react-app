@@ -1,0 +1,27 @@
+.buttons {
+  position: relative;
+  padding-top: 5%;
+  width: 100%;
+}
+
+h1 {
+  margin-top: 2%;
+}
+
+.nextPageDiv button {
+  width: 20%;
+}
+
+[role=nextPageBtn] {
+  width: 20%;
+  margin-left: 20%;
+}
+
+@media screen and (max-width: 480px) {
+  [role=nextPageBtn] {
+    margin-left: 25%;
+    width: 50%;
+    margin-top: 5%;
+  }
+}
+/*# sourceMappingURL=nextPage.css.map */

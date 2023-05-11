@@ -11,6 +11,10 @@ export default function ModalOrder() {
 
   const order = localStorage.getItem('finishedOrder');
 
+  const buy = () => {
+    window.location.reload();
+  }
+
   if (localStorage.getItem('lang') === 'hr') {
     return (
       <Modal.Dialog>
@@ -25,6 +29,10 @@ export default function ModalOrder() {
             <p>Kontakt: {localStorage.getItem('phone')}</p>
             <p>Način plaćanja: {localStorage.getItem('payMethod')}</p>
           </Modal.Body>
+  
+          <Modal.Footer>
+            <Button variant="primary" onClick={buy}>Potvrdi</Button>
+          </Modal.Footer>
         </Modal.Dialog>
     )
   } else {
@@ -41,6 +49,10 @@ export default function ModalOrder() {
             <p>Phone: {localStorage.getItem('phone')}</p>
             <p>Payment: {localStorage.getItem('payMethod')}</p>
           </Modal.Body>
+  
+          <Modal.Footer>
+            <Button variant="primary" onClick={buy}>Confirm</Button>
+          </Modal.Footer>
         </Modal.Dialog>
     )
   }

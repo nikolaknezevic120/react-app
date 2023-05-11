@@ -4,8 +4,10 @@
 
 .modal-content {
   border: 1px solid white;
-  border-radius: 5%;
   padding: 2%;
+  width: 50%;
+  margin-left: 25%;
+  z-index: 0;
 }
 
 .btn {
@@ -39,5 +41,12 @@
 
 #imgOrder {
   width: 2vw;
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content {
+    width: 100%;
+    margin-left: 0%;
+  }
 }
 /*# sourceMappingURL=modal.css.map */
