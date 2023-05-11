@@ -11,8 +11,8 @@ export default function nextPage() {
                     Narudžba je zaprimljena, u najkraćem roku biti će posalan na Vašu adresu!
                 </h3>
                 <div className='buttons'>
-                    <Button id='btnOne' href='./#/index'>Početna</Button>
-                    <Button id='btnTwo' href='./#/webShop'>WebShop</Button>
+                    <Button id='btnOne' role='nextPageBtn' href='./#/index'>Početna</Button>
+                    <Button id='btnTwo' role='nextPageBtn' href='./#/webShop'>WebShop</Button>
                 </div>
             </div>
         )
