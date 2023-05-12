@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import { Button } from 'react-bootstrap';
 
 export default function UserInput() {
 
@@ -8,25 +7,25 @@ export default function UserInput() {
     const [adress, setAdress] = useState("");
     const [mail, setMail] = useState("");
     const [phone, setPhone] = useState("");
+    localStorage.setItem('name', name);
+    localStorage.setItem('adress', adress);
+    localStorage.setItem('mail', mail);
+    localStorage.setItem('phone', phone);
 
     const handleChange1 = (e) => {
         setName(e.target.value);
-        localStorage.setItem('name', name);
     };
 
     const handleChange2 = (e) => {
         setAdress(e.target.value);
-        localStorage.setItem('adress', adress);
     };
 
     const handleChange3 = (e) => {
         setMail(e.target.value);
-        localStorage.setItem('mail', mail);
     };
 
     const handleChange4 = (e) => {
         setPhone(e.target.value);
-        localStorage.setItem('phone', phone);
     };
 
     if (localStorage.getItem('lang') === 'hr') {

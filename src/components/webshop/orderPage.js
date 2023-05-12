@@ -16,13 +16,22 @@ export default function OrderPage() {
     const [nextPage, setNextPage] = useState(false);
 
     const continueOrder = () => {
-        setChooseMethod(true);
+        if (localStorage.getItem('name') == '' || localStorage.getItem('adress') == ''
+            || localStorage.getItem('mail') == '' || localStorage.getItem('phone') == '') {
+            alert('Nisu uneseni svi podaci! \n\n not all data has been entered');
+        } else {
+            setChooseMethod(true);
+        }
     }
 
     const finishOrder = () => {
-        setShowModal(true);
-        setLoadedPage(false);
-        setChooseMethod(false);
+        if (localStorage.getItem('selectedPayMethod') == '') {
+            alert('Nije odabrana metoda plaćanja \n\n No payment method was selected');
+        } else {
+            setShowModal(true);
+            setLoadedPage(false);
+            setChooseMethod(false);
+        }
     }
 
     const overOrder = () => {

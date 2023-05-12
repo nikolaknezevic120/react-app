@@ -10,8 +10,9 @@ export default function PayMethod() {
   
   const handleOptionChange = (event) => {
     setSelectedPayOption(event.target.value);
-    localStorage.setItem('payMethod', event.target.value);
   };
+
+  localStorage.setItem('selectedPayMethod', selectedPayOption);
 
   if (localStorage.getItem('lang') === 'hr') {
     return (

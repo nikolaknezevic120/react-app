@@ -10,7 +10,7 @@ export default function checkCart() {
     return (
         <div className='orderMap'>
             {order.map(items => (
-                <li>
+                <li key={Math.floor(Math.random() * (10000 - 1 + 1)) + 1}>
                     {items}
                 </li>
             ))}

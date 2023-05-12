@@ -23,6 +23,7 @@ export default function WebShopMain() {
   const [finishedOrder, setFinishedOrder] = useState('');
   const finishedOrderLocalStorafe = localStorage.setItem('finishedOrder', finishedOrder);
   const [showCart, setShowCart] = useState(false);
+  const [enableContinue, setEnableContinue] = useState(true);
 
   const itemOrder = ' domaći dres\nveličina: ';
   const item1order = ' gostujući dres\nveličina: ';
@@ -61,8 +62,16 @@ export default function WebShopMain() {
 
   const options = ['XS', 'S', 'M', 'L', 'XL'];
 
+  const stringSum = "ukupna cijena: " + sum + '€.';
+  const lenghtString = stringSum.length;
+
   const viewCart = (event) => {
     setShowCart(!showCart);
+    if (showCart === false) {
+      setText(text + stringSum);
+    } else {
+      setText(text.slice(0, -lenghtString));
+    }
   }
 
   const [num, setNum] = useState(0);
@@ -137,62 +146,68 @@ export default function WebShopMain() {
 
   const handleButtonClick = () => {
     if (num != 0) {
-      const newText = num + itemOrder + selectedOption + '\n';
+      const newText = num + itemOrder + selectedOption + '\n' + 'cijena: ' + price * num + '€.' + '\n\n';
       setOrderedNum(orderedNum => orderedNum + num);
       setText(text + newText);
       setNum(0);
       setNames(current => [...current, newText]);
       setSum(sum + num * price);
+      setEnableContinue(false);
     }
   };
   const handleButtonClick1 = () => {
     if (num1 != 0) {
-      const newText = num1 + item1order + selectedOption + '\n';
+      const newText = num1 + item1order + selectedOption + '\n' + 'cijena: ' + price1 * num1 + '€.' + '\n\n';
       setOrderedNum(orderedNum => orderedNum + num1);
       setText(text + newText);
       setNum1(0);
       setNames(current => [...current, newText]);
       setSum(sum + num1 * price1);
+      setEnableContinue(false);
     }
   };
   const handleButtonClick2 = () => {
     if (num2 != 0) {
-      const newText = num2 + item2order + selectedOption + '\n';
+      const newText = num2 + item2order + selectedOption + '\n' + 'cijena: ' + price2 * num2 + '€.' + '\n\n';
       setOrderedNum(orderedNum => orderedNum + num2);
       setText(text + newText);
       setNames(current => [...current, newText]);
       setNum2(0);
       setSum(sum + num2 * price2);
+      setEnableContinue(false);
     }
   };
   const handleButtonClick3 = () => {
     if (num3 != 0) {
-      const newText = num3 + item3order + '\n';
+      const newText = num3 + item3order + '\n' + 'cijena: ' + price3 * num3 + '€.' + '\n\n';
       setText(text + newText);
       setOrderedNum(orderedNum => orderedNum + num3);
       setNames(current => [...current, newText]);
       setNum3(0);
       setSum(sum + num3 * price3);
+      setEnableContinue(false);
     }
   };
   const handleButtonClick4 = () => {
     if (num4 != 0) {
-      const newText = num4 + item4order + '\n';
+      const newText = num4 + item4order + '\n' + 'cijena: ' + price4 * num4 + '€.' + '\n\n';
       setText(text + newText);
       setOrderedNum(orderedNum => orderedNum + num4);
       setNames(current => [...current, newText]);
       setNum4(0);
       setSum(sum + num4 * price4);
+      setEnableContinue(false);
     }
   };
   const handleButtonClick5 = () => {
     if (num5 != 0) {
-      const newText = num5 + item5order + '\n';
+      const newText = num5 + item5order + '\n' + 'cijena: ' + price5 * num5 + '€.' + '\n\n';
       setText(text + newText);
       setOrderedNum(orderedNum => orderedNum + num5);
       setNames(current => [...current, newText]);
       setNum5(0);
       setSum(sum + num5 * price5);
+      setEnableContinue(false);
     }
   };
 
@@ -205,6 +220,7 @@ export default function WebShopMain() {
   const continueOrder = (event) => {
     if (text != 'Vasa kosarica\n') {
       setText(text + 'ukupan iznos: ' + sum.toFixed(2) + '€.');
+      localStorage.setItem('sum', sum);
       setTimeout(() => {
         document.location.reload();
       }, 0.1);
@@ -329,18 +345,27 @@ export default function WebShopMain() {
             <div className='cart'>
               <div className='cartOptions'>
                 <Row>
-                  <Button id='cartBtn' onClick={clearCart}>Isprazni</Button>
-                  <Button id='cartBtn' onClick={viewCart}>Pregledaj</Button>
-                  <Button id='cartBtn' role='cartBtn' href='./#/webShop/orderpage' onClick={continueOrder} >Nastavi</Button>
+                  {enableContinue ? null :
+                    <Button id='cartBtn' onClick={clearCart}>Isprazni</Button>
+                  }
+                  {enableContinue ? null :
+                    <Button id='cartBtn' onClick={viewCart}>Pregledaj</Button>
+                  }
+                </Row>
+                <Row>
+                  <div className='xcxcx'>
+                    {showCart ? <textarea value={text} disabled={true} /> : null}
+                  </div>
+                </Row>
+                <Row>
+                  {enableContinue ? null :
+                    <Button id='cartBtn' role='cartBtn' href='./#/webShop/orderpage' onClick={continueOrder}>Nastavi</Button>
+                  }
                 </Row>
               </div>
             </div>
 
-            <Row>
-              <div className='xcxcx'>
-                {showCart ? <textarea value={text} disabled={true} /> : null}
-              </div>
-            </Row>
+
           </Col>
         </Row>
 
@@ -454,18 +479,25 @@ export default function WebShopMain() {
             <div className='cart'>
               <div className='cartOptions'>
                 <Row>
-                  <Button id='cartBtn' onClick={clearCart}>Empty</Button>
-                  <Button id='cartBtn' onClick={viewCart}>View cart</Button>
-                  <Button id='cartBtn' role='cartBtn' href='./#/webShop/orderpage' onClick={continueOrder}>Continue</Button>
+                  {enableContinue ? null :
+                    <Button id='cartBtn' onClick={clearCart}>Empty</Button>
+                  }
+                  {enableContinue ? null :
+                    <Button id='cartBtn' onClick={viewCart}>View cart</Button>
+                  }
+                </Row>
+                <Row>
+                  <div className='xcxcx'>
+                    {showCart ? <textarea value={text} disabled={true} /> : null}
+                  </div>
+                </Row>
+                <Row>
+                  {enableContinue ? null :
+                    <Button id='cartBtn' role='cartBtn' href='./#/webShop/orderpage' onClick={continueOrder}>Continue</Button>
+                  }
                 </Row>
               </div>
             </div>
-
-            <Row>
-              <div className='xcxcx'>
-                {showCart ? <textarea value={text} disabled={true} /> : null}
-              </div>
-            </Row>
           </Col>
         </Row>
 

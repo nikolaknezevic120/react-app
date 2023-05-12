@@ -23,7 +23,7 @@ export default function ModalOrder() {
             <p>Ime: {localStorage.getItem('name')}</p>
             <p>Adresa: {localStorage.getItem('adress')}</p>
             <p>Kontakt: {localStorage.getItem('phone')}</p>
-            <p>Način plaćanja: {localStorage.getItem('payMethod')}</p>
+            <p>Način plaćanja: {localStorage.getItem('selectedPayMethod')}</p>
           </Modal.Body>
         </Modal.Dialog>
     )
@@ -39,7 +39,7 @@ export default function ModalOrder() {
             <p>Name: {localStorage.getItem('name')}</p>
             <p>Adress: {localStorage.getItem('adress')}</p>
             <p>Phone: {localStorage.getItem('phone')}</p>
-            <p>Payment: {localStorage.getItem('payMethod')}</p>
+            <p>Payment: {localStorage.getItem('selectedPayMethod')}</p>
           </Modal.Body>
         </Modal.Dialog>
     )
