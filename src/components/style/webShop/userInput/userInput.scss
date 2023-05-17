@@ -1,0 +1,42 @@
+#name{
+    width: 46%;
+    margin-left: 2.5%;
+}
+
+#lastName{
+    width: 46%;
+    margin-left: 3%;
+}
+
+.PhoneInput{
+    display: flex;
+    flex-direction: row;
+}
+
+.PhoneInputCountry{
+    width: 30%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.PhoneInputCountryIcon{
+    display: none;
+}
+
+.PhoneInputCountrySelect{
+    background-color: transparent;
+    border: 1px solid white;
+    padding-left: 5%;
+    padding-bottom: 2%;    
+    width: 100%;
+    color: #d4922f;
+}
+
+.PhoneInputCountrySelect option{
+    background-color: #1d1d20;
+}
+
+#phoneInput{
+    width: 100%;
+    margin-left: 3%;
+}

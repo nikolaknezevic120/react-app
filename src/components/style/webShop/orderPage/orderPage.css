@@ -9,6 +9,12 @@
   color: transparent;
 }
 
+.orderMap p {
+  margin-top: 2.5%;
+  padding-left: 5%;
+  font-size: larger;
+}
+
 .userInput {
   display: -webkit-box;
   display: -ms-flexbox;

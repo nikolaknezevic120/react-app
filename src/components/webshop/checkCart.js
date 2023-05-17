@@ -3,7 +3,7 @@ import React from 'react';
 import '../style/webShop/orderPage/orderPage.css';
 
 const order = JSON.parse(localStorage.getItem("items"));
-
+const sum = localStorage.getItem("sum");
 
 export default function checkCart() {
 
@@ -14,6 +14,8 @@ export default function checkCart() {
                     {items}
                 </li>
             ))}
+
+            <p>Iznos za plaćanje: {sum} €</p>
         </div>
     )
 }
