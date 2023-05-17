@@ -27,7 +27,7 @@ export default function AboutHr() {
                             sa frontendom. Za sebe smatram kako posjedujem potencijal i volju za napredak.
                         </p>
 
-                        <h4>Koja su moja iskustva do sada</h4>
+                        <h4>Dosadašnja iskustva</h4>
                         <p>
                             Do nedavno sam radio isključivo obaveze i zadatke koje sam morao raditi na fakultetu, 
                             te kad sam dobio više slobodnog vremena počeo sam više istraživati i posvećivati se 
@@ -112,7 +112,7 @@ export default function AboutHr() {
                     <div class="text">
                         <h4>Radi li Nikola jos nešto, ima li hobije?</h4>
                             <p>
-                                Naravno, zaljubeljenik sam u glazbu i sport. Trenirao sam dugo veslanje i sviram harmoniku. 
+                                Naravno, zaljubljenik sam u glazbu i sport. Trenirao sam dugo veslanje i sviram harmoniku. 
                                 Volim pošlusati sve glazbene žanrove i pogledati svaki sport od veslanja i skijanja do rukometa 
                                 i nogometa. Trenutno sviram harmoniku, idem u teretanu i vozim bicikl.
                             </p>

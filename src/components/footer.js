@@ -159,7 +159,7 @@ export default function footer() {
 
             <Col lg={4} md={12} sm={6}>
               <h5 id="h5-foot">Contact</h5>
-              <p><BsFillChatSquareTextFill /><a href='#/download-and-contact'> Send me e-mail.</a></p>
+              <p><BsFillChatSquareTextFill /><a href='#/download-and-contact'> Send me an e-mail.</a></p>
 
               <p><BsFillTelephoneOutboundFill /> Mob: <a href="tel:+385958409108"> 095 840 91 08 </a></p>
 

@@ -33,18 +33,18 @@ export default function WebShopMain() {
   const item5order = ' upaljač\n';
 
   const price = 50.00.toFixed(2);
-  const price1 = 45.68
-  const price2 = 42.75;
-  const price3 = 14.55;
-  const price4 = 13.65;
-  const price5 = 28.85;
+  const price1 = 45.68.toFixed(2);
+  const price2 = 42.75.toFixed(2);
+  const price3 = 14.55.toFixed(2);
+  const price4 = 13.65.toFixed(2);
+  const price5 = 28.85.toFixed(2);
   const convertValute = 7.53450;
-  const priceHr = price * convertValute;
-  const priceHr1 = price1 * convertValute;
-  const priceHr2 = price2 * convertValute;
-  const priceHr3 = price3 * convertValute;
-  const priceHr4 = price4 * convertValute;
-  const priceHr5 = price5 * convertValute;
+  const priceHr = price * convertValute.toFixed(2);
+  const priceHr1 = price1 * convertValute.toFixed(2);
+  const priceHr2 = price2 * convertValute.toFixed(2);
+  const priceHr3 = price3 * convertValute.toFixed(2);
+  const priceHr4 = price4 * convertValute.toFixed(2);
+  const priceHr5 = price5 * convertValute.toFixed(2);
   const [sum, setSum] = useState(0);
   const [orderedNum, setOrderedNum] = useState(0);
 
@@ -62,7 +62,7 @@ export default function WebShopMain() {
 
   const options = ['XS', 'S', 'M', 'L', 'XL'];
 
-  const stringSum = "ukupna cijena: " + sum + '€.';
+  const stringSum = "ukupna cijena: " + sum.toFixed(2) + '€.';
   const lenghtString = stringSum.length;
 
   const viewCart = (event) => {
@@ -220,7 +220,7 @@ export default function WebShopMain() {
   const continueOrder = (event) => {
     if (text != 'Vasa kosarica\n') {
       setText(text + 'ukupan iznos: ' + sum.toFixed(2) + '€.');
-      localStorage.setItem('sum', sum);
+      localStorage.setItem('sum', sum.toFixed(2));
       setTimeout(() => {
         document.location.reload();
       }, 0.1);
